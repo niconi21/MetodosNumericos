@@ -1,0 +1,177 @@
+﻿using MetodosNumericos.src.herramientas.objetos;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MetodosNumericos.src.herramientas.objetos.Unidad4;
+using MetodosNumericos.src.herramientas.objetos.Unidad_4;
+using System.Windows.Forms.DataVisualization.Charting;
+using MetodosNumericos.src.herramientas.objetos.Unidad_5;
+
+namespace MetodosNumericos.src.vistas
+{
+    public partial class Inicio : Form
+    {
+        private EscrituraLectura _escribirLeer = new EscrituraLectura();
+        private Modelo _modelo;
+        private int _cantidadImagenes;
+        public Inicio()
+        {
+            InitializeComponent();
+            labelInstruccionesUnidad4.Text = "Calcularemos laa integral y la derivada e funciones, es por ello que tenemos dos secciones." +
+                "\nEn la primera \"Diferenciación\" podrás encontrar tres cajas de texto, donde introducirás tu función y el valor correspondiente a h y a x0\npara poder calcular la derivada.\n " +
+                "\nEn la segunda \"Trapecio simple y compuesto\" podrémos encontrar tres cajas de texto donde se introducirán la funcion y los intervalos\n de esta para poder calcular la integral";
+            lblInstruccionesUnidad5.Text = "En esta unidad calcularemos una función a partir de unos puntos datos, es decir, tu nos proporcionarás " +
+                "\nlos puntos que tengas, y a partir de ellos calcularemos una funcion polinomial utilizando la interpoalción de Lagrange" +
+                "\n\nLas aplicaciones de esto suelen ser en la predicción de datos a partir de un conjunto de datos, como lo puede ser en la economía";
+        }
+
+        //////////////
+        ///Unidad 4///
+        //////////////
+        private void btnDiferenciacionUnidad4_Click(object sender, EventArgs e)
+        {
+            String funcion = txtFuncionUnidad4.Text;
+            float valorH = float.Parse(txtValorHDiferenciacionUnidad4.Text);
+            float valorX0 = float.Parse(txtValorX0DiferenciacionUnidad4.Text);
+            this._modelo = new ModeloDiferenciacionNumerica(funcion, valorX0, valorH);
+            var resultados = this._modelo.resultados();
+            lblResultadoFuncionDiferenciacionUnidad4.Text = "Función: " + funcion;
+            lblDosPuntosUnidad4.Text = "Dos puntos:" +
+                                       "\nInfinita prograsiva = " + resultados[0] +
+                                       "\nInfinita centrada = " + resultados[2] +
+                                       "\nInfinita regresiva = " + resultados[4];
+            lblTresPuntosUnidad4.Text = "Tres Puntos:" +
+                                       "\nInfinita prograsiva = " + resultados[1] +
+                                       "\nInfinita centrada = " + resultados[2] +
+                                       "\nInfinita regresiva = " + resultados[5];
+            grafica.Series[0].ChartType = SeriesChartType.Spline;
+            grafica.Series[0].Points.Clear();
+            var puntos = this._modelo.puntos();
+            int j = 0;
+            for (int i = -3; i < 3; i++)
+            {
+                grafica.Series[0].Points.AddXY(i, puntos[j++]);
+            }
+
+            Resultados guardarDatos = new Resultados
+            {
+                Funcion = funcion,
+                DosPuntosInfinitasProgresivas = resultados[0],
+                TresPuntosInfinitasProgresivas = resultados[1],
+                DosPuntosInfinitasCentradas = resultados[2],
+                TresPuntosInfinitasCentradas = resultados[3],
+                DosPuntosInfinitasRegresivas = resultados[4],
+                TresPuntosInfinitasRegresivas = resultados[5],
+            }; 
+            _escribirLeer.escribirDiferenciacionUnidad4(guardarDatos);
+            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 4\Diferenciacion Numerica\" + funcion + ".png", ChartImageFormat.Png);
+        }
+
+        private void tabHistorial_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var reultados = _escribirLeer.leerDiferenciacionUnidad4();
+                historialDiferenciacionUnidad4.DataSource = reultados;
+            }
+            catch { }
+        }
+
+        private void btnTrapecioUnidad4_Click(object sender, EventArgs e)
+        {
+            String funcion = txtFuncionUnidad4.Text;
+            float intervaloA = float.Parse(txtIntervaloAUnidad4.Text);
+            float intervaloB = float.Parse(txtIntervaloBUnidad4.Text);
+            int valorN = int.Parse(txtValorNTrapecio.Text);
+            this._modelo = new ModeloTrapecio(funcion, intervaloA, intervaloB, valorN);
+            var resultados = this._modelo.resultados();
+            lblFuncionTrapecioUnidad4.Text = "Función: " + funcion;
+            lblTrapecioSimple.Text = "Trapecio Simple: = " + resultados[0];
+            lblTrapecioCompuesto.Text = "Trapecio Compuesto: = " + resultados[1];
+
+            grafica.Series[0].ChartType = SeriesChartType.Area;
+            grafica.Series[0].Points.Clear();
+            var puntos = this._modelo.puntos();
+            int j = 0;
+            for (int i = -3; i < 3; i++)
+            {
+                grafica.Series[0].Points.AddXY(i, puntos[j++]);
+            }
+            ResultadosTrapecio guardarResultados=new ResultadosTrapecio{
+                Funcion = funcion,
+                Simple = resultados[0],
+                Compuesto = resultados[1]
+            };
+            _escribirLeer.escribirTrapecioUnidad4(guardarResultados);
+            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 4\Trapecio" + funcion + ".png", ChartImageFormat.Png);
+        }
+        private void tabHistorialTrapecio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultados = _escribirLeer.leerTrapecioUnidad4();
+                historialTrapecioUnidad4.DataSource = resultados;
+            }
+            catch {}
+        }
+
+        //////////////
+        ///Unidad 5///
+        //////////////
+        private void btnCalcularUnidad5_Click(object sender, EventArgs e)
+        {
+            String textoValoresX = txtValoresXUnidad5.Text;
+            String textoValoresY = txtValoresYUnidad5.Text;
+
+            var valoresX = textoValoresX.Split(',');
+            var valoresY = textoValoresY.Split(',');
+            float[] arrelgoX = new float[valoresX.Length];
+            for (int i = 0; i < valoresX.Length; i++)
+            {
+                arrelgoX[i] = float.Parse(valoresX[i]);
+            }
+            float[] arrelgoY = new float[valoresY.Length];
+            for (int i = 0; i < valoresY.Length; i++)
+            {
+                arrelgoY[i] = float.Parse(valoresY[i]);
+            }
+
+            _modelo = new ModeloLagrange(arrelgoX, arrelgoY);
+            String funcion = ((ModeloLagrange)_modelo).resultadoFuncion();
+            lblFuncionUnidad5.Text = funcion;
+            grafica.Series[0].ChartType = SeriesChartType.Spline;
+            grafica.Series[0].Points.Clear();
+            
+            for (int i = 0; i < arrelgoX.Length; i++)
+            {
+                grafica.Series[0].Points.AddXY(arrelgoX[i], arrelgoY[i]);
+            }
+            ResultadoLangrage resultados = new ResultadoLangrage();
+            resultados.Funcion = funcion;
+            resultados.puntosX = arrelgoX;
+            resultados.puntosY = arrelgoY;
+            _escribirLeer.escribirLangrageUnidad5(resultados);
+            _cantidadImagenes++;
+            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 5\Lagrange\" + _cantidadImagenes + ".png", ChartImageFormat.Png);
+        }
+
+
+        private void tabHistoialUnidad5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultados = _escribirLeer.leerLangrageUnidad5();
+                historialUnidad5.DataSource = resultados;
+            }
+            catch { }
+            
+        }
+
+    }
+}
