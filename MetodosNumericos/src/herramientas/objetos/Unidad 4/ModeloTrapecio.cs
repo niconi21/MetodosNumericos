@@ -35,13 +35,11 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad4
             float sustitucionIntervaloA = base.Funcion.evaluar(this.intervaloA);
             float sumatoria = 0;
             float intervalo = diferenciaIntervalos / (float)base.ValorN;
-            float acumulador = this.intervaloA;
+            float acumulador = this.intervaloA + intervalo;
             while (acumulador != this.intervaloB)
             {
-                acumulador += intervalo;
                 sumatoria += base.Funcion.evaluar(acumulador);
-                //MessageBox.Show(acumulador.ToString() + " -> " + base.Funcion.evaluar(acumulador) + " -> " + sumatoria.ToString());
-                
+                acumulador += intervalo;
             }
             
             float sustitucionIntervaloB = base.Funcion.evaluar(this.intervaloB);
