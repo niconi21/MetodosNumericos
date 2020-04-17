@@ -56,6 +56,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.historialDiferenciacionUnidad4 = new System.Windows.Forms.DataGridView();
+            this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.txtValorNTrapecio = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,14 +80,14 @@
             this.lblResultadosTrapecioUnidad4 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.historialTrapecioUnidad4 = new System.Windows.Forms.DataGridView();
+            this.funcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabHistoialUnidad5 = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -89,19 +97,11 @@
             this.txtValoresXUnidad5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.historialUnidad5 = new System.Windows.Forms.DataGridView();
-            this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.funcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -111,20 +111,20 @@
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialDiferenciacionUnidad4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabHistorialTrapecio.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialTrapecioUnidad4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
             this.tabHistoialUnidad5.SuspendLayout();
             this.tabPage12.SuspendLayout();
-            this.tabPage13.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -390,6 +390,52 @@
             this.historialDiferenciacionUnidad4.Size = new System.Drawing.Size(622, 292);
             this.historialDiferenciacionUnidad4.TabIndex = 0;
             // 
+            // funcionDataGridViewTextBoxColumn
+            // 
+            this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn.Name = "funcionDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasProgresivas";
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Progresivas";
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasProgresivas";
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Progresivas";
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasCentradasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasCentradas";
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Centradas";
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasCentradasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasCentradasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasCentradas";
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Centradas";
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasCentradasDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasRegresivas";
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Regresivas";
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasRegresivas";
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Regresivas";
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
+            // 
+            // resultadosBindingSource1
+            // 
+            this.resultadosBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados);
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.txtValorNTrapecio);
@@ -561,6 +607,28 @@
             this.historialTrapecioUnidad4.Size = new System.Drawing.Size(622, 302);
             this.historialTrapecioUnidad4.TabIndex = 0;
             // 
+            // funcionDataGridViewTextBoxColumn1
+            // 
+            this.funcionDataGridViewTextBoxColumn1.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn1.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn1.Name = "funcionDataGridViewTextBoxColumn1";
+            // 
+            // simpleDataGridViewTextBoxColumn
+            // 
+            this.simpleDataGridViewTextBoxColumn.DataPropertyName = "Simple";
+            this.simpleDataGridViewTextBoxColumn.HeaderText = "Simple";
+            this.simpleDataGridViewTextBoxColumn.Name = "simpleDataGridViewTextBoxColumn";
+            // 
+            // compuestoDataGridViewTextBoxColumn
+            // 
+            this.compuestoDataGridViewTextBoxColumn.DataPropertyName = "Compuesto";
+            this.compuestoDataGridViewTextBoxColumn.HeaderText = "Compuesto";
+            this.compuestoDataGridViewTextBoxColumn.Name = "compuestoDataGridViewTextBoxColumn";
+            // 
+            // resultadosTrapecioBindingSource
+            // 
+            this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -584,45 +652,6 @@
             this.tabPage5.Text = "Unidad 5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // lblInstruccionesUnidad5
-            // 
-            this.lblInstruccionesUnidad5.AutoSize = true;
-            this.lblInstruccionesUnidad5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblInstruccionesUnidad5.Location = new System.Drawing.Point(0, 25);
-            this.lblInstruccionesUnidad5.Name = "lblInstruccionesUnidad5";
-            this.lblInstruccionesUnidad5.Size = new System.Drawing.Size(35, 13);
-            this.lblInstruccionesUnidad5.TabIndex = 3;
-            this.lblInstruccionesUnidad5.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(505, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Unidad 5: Interpolación y ajuste de funciones";
-            // 
-            // grafica
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.grafica.ChartAreas.Add(chartArea1);
-            this.grafica.Dock = System.Windows.Forms.DockStyle.Right;
-            legend1.Name = "Legend1";
-            this.grafica.Legends.Add(legend1);
-            this.grafica.Location = new System.Drawing.Point(664, 0);
-            this.grafica.Name = "grafica";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Funcion";
-            this.grafica.Series.Add(series1);
-            this.grafica.Size = new System.Drawing.Size(376, 590);
-            this.grafica.TabIndex = 3;
-            this.grafica.Text = "chart1";
-            // 
             // tabHistoialUnidad5
             // 
             this.tabHistoialUnidad5.Controls.Add(this.tabPage12);
@@ -645,17 +674,6 @@
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Langrage";
             this.tabPage12.UseVisualStyleBackColor = true;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.historialUnidad5);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(642, 500);
-            this.tabPage13.TabIndex = 1;
-            this.tabPage13.Text = "Historial";
-            this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -748,6 +766,17 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Ingresa los valores en X:";
             // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.historialUnidad5);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(642, 500);
+            this.tabPage13.TabIndex = 1;
+            this.tabPage13.Text = "Historial";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
             // historialUnidad5
             // 
             this.historialUnidad5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -757,73 +786,44 @@
             this.historialUnidad5.Size = new System.Drawing.Size(636, 494);
             this.historialUnidad5.TabIndex = 0;
             // 
-            // funcionDataGridViewTextBoxColumn
+            // lblInstruccionesUnidad5
             // 
-            this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
-            this.funcionDataGridViewTextBoxColumn.HeaderText = "Funcion";
-            this.funcionDataGridViewTextBoxColumn.Name = "funcionDataGridViewTextBoxColumn";
+            this.lblInstruccionesUnidad5.AutoSize = true;
+            this.lblInstruccionesUnidad5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblInstruccionesUnidad5.Location = new System.Drawing.Point(0, 25);
+            this.lblInstruccionesUnidad5.Name = "lblInstruccionesUnidad5";
+            this.lblInstruccionesUnidad5.Size = new System.Drawing.Size(35, 13);
+            this.lblInstruccionesUnidad5.TabIndex = 3;
+            this.lblInstruccionesUnidad5.Text = "label4";
             // 
-            // dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // label3
             // 
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasProgresivas";
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Progresivas";
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(505, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Unidad 5: Interpolación y ajuste de funciones";
             // 
-            // tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // grafica
             // 
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasProgresivas";
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Progresivas";
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
-            // 
-            // dosPuntosInfinitasCentradasDataGridViewTextBoxColumn
-            // 
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasCentradas";
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Centradas";
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasCentradasDataGridViewTextBoxColumn";
-            // 
-            // tresPuntosInfinitasCentradasDataGridViewTextBoxColumn
-            // 
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasCentradas";
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Centradas";
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasCentradasDataGridViewTextBoxColumn";
-            // 
-            // dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn
-            // 
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasRegresivas";
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Regresivas";
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
-            // 
-            // tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn
-            // 
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasRegresivas";
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Regresivas";
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
-            // 
-            // resultadosBindingSource1
-            // 
-            this.resultadosBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados);
-            // 
-            // funcionDataGridViewTextBoxColumn1
-            // 
-            this.funcionDataGridViewTextBoxColumn1.DataPropertyName = "Funcion";
-            this.funcionDataGridViewTextBoxColumn1.HeaderText = "Funcion";
-            this.funcionDataGridViewTextBoxColumn1.Name = "funcionDataGridViewTextBoxColumn1";
-            // 
-            // simpleDataGridViewTextBoxColumn
-            // 
-            this.simpleDataGridViewTextBoxColumn.DataPropertyName = "Simple";
-            this.simpleDataGridViewTextBoxColumn.HeaderText = "Simple";
-            this.simpleDataGridViewTextBoxColumn.Name = "simpleDataGridViewTextBoxColumn";
-            // 
-            // compuestoDataGridViewTextBoxColumn
-            // 
-            this.compuestoDataGridViewTextBoxColumn.DataPropertyName = "Compuesto";
-            this.compuestoDataGridViewTextBoxColumn.HeaderText = "Compuesto";
-            this.compuestoDataGridViewTextBoxColumn.Name = "compuestoDataGridViewTextBoxColumn";
-            // 
-            // resultadosTrapecioBindingSource
-            // 
-            this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
+            chartArea1.Name = "ChartArea1";
+            this.grafica.ChartAreas.Add(chartArea1);
+            this.grafica.Dock = System.Windows.Forms.DockStyle.Right;
+            legend1.Name = "Legend1";
+            this.grafica.Legends.Add(legend1);
+            this.grafica.Location = new System.Drawing.Point(664, 0);
+            this.grafica.Name = "grafica";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Funcion";
+            this.grafica.Series.Add(series1);
+            this.grafica.Size = new System.Drawing.Size(376, 590);
+            this.grafica.TabIndex = 3;
+            this.grafica.Text = "chart1";
             // 
             // Inicio
             // 
@@ -848,6 +848,7 @@
             this.tabPage10.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialDiferenciacionUnidad4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabHistorialTrapecio.ResumeLayout(false);
@@ -855,17 +856,16 @@
             this.tabPage8.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialTrapecioUnidad4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
             this.tabHistoialUnidad5.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
             this.ResumeLayout(false);
 
         }

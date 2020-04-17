@@ -12,7 +12,6 @@ namespace MetodosNumericos.src.herramientas.objetos
         public float ValorXinicial { get; set; }
         public Funcion Funcion { get; set; }
         public abstract float[] resultados();
-        
         public abstract List<float> puntos();
     }
 }
