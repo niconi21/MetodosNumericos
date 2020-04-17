@@ -36,11 +36,11 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad4
             float sumatoria = 0;
             float intervalo = diferenciaIntervalos / (float)base.ValorN;
             float acumulador = this.intervaloA;
-            while (acumulador < this.intervaloB)
+            while (acumulador != this.intervaloB)
             {
-                MessageBox.Show(acumulador.ToString());
-                sumatoria += base.Funcion.evaluar(acumulador);
                 acumulador += intervalo;
+                sumatoria += base.Funcion.evaluar(acumulador);
+                //MessageBox.Show(acumulador.ToString() + " -> " + base.Funcion.evaluar(acumulador) + " -> " + sumatoria.ToString());
                 
             }
             
