@@ -10,3 +10,12 @@ C:\Users\moren\documents\visual studio 2013\Projects\MetodosNumericos\MetodosNum
 C:\Users\moren\Desktop\MetodosNumericos\MetodosNumericos\bin\Debug\MetodosNumericos.exe.config
 C:\Users\moren\Desktop\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.exe
 C:\Users\moren\Desktop\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.pdb
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\bin\Debug\MetodosNumericos.exe.config
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.exe
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.pdb
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\bin\Debug\MetodosNumericos.exe
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\bin\Debug\MetodosNumericos.pdb
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.csprojResolveAssemblyReference.cache
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.Properties.Resources.resources
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.src.vistas.Inicio.resources
+C:\Users\moren\Documents\GitHub\MetodosNumericos\MetodosNumericos\obj\Debug\MetodosNumericos.csproj.GenerateResource.Cache

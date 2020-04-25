@@ -29,11 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.buttonCalcularCifrasUnidad1 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCifraUnidad1 = new System.Windows.Forms.TextBox();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.labelInstruccionesUnidad1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,14 +68,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.historialDiferenciacionUnidad4 = new System.Windows.Forms.DataGridView();
-            this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.txtValorNTrapecio = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,10 +84,6 @@
             this.lblResultadosTrapecioUnidad4 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.historialTrapecioUnidad4 = new System.Windows.Forms.DataGridView();
-            this.funcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabHistoialUnidad5 = new System.Windows.Forms.TabControl();
@@ -102,7 +102,27 @@
             this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelCifraUniad1 = new System.Windows.Forms.Label();
+            this.labelResultadoCifraSignificativaUnidad1 = new System.Windows.Forms.Label();
+            this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.labelNotacionCientificaUnidad1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabPage17.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -111,13 +131,11 @@
             this.tabPage10.SuspendLayout();
             this.tabPage11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialDiferenciacionUnidad4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabHistorialTrapecio.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialTrapecioUnidad4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabHistoialUnidad5.SuspendLayout();
             this.tabPage12.SuspendLayout();
@@ -125,6 +143,8 @@
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -143,6 +163,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tabControl3);
+            this.tabPage1.Controls.Add(this.labelInstruccionesUnidad1);
+            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -150,6 +173,133 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Unidad 1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage14);
+            this.tabControl3.Controls.Add(this.tabPage15);
+            this.tabControl3.Controls.Add(this.tabPage16);
+            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl3.Location = new System.Drawing.Point(3, 41);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(644, 520);
+            this.tabControl3.TabIndex = 5;
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.tabControl4);
+            this.tabPage14.Controls.Add(this.buttonCalcularCifrasUnidad1);
+            this.tabPage14.Controls.Add(this.label14);
+            this.tabPage14.Controls.Add(this.txtCifraUnidad1);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(636, 494);
+            this.tabPage14.TabIndex = 0;
+            this.tabPage14.Text = "Cifras Significativas";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage17);
+            this.tabControl4.Controls.Add(this.tabPage18);
+            this.tabControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabControl4.Location = new System.Drawing.Point(3, 117);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(630, 374);
+            this.tabControl4.TabIndex = 8;
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.labelNotacionCientificaUnidad1);
+            this.tabPage17.Controls.Add(this.labelResultadoCifraSignificativaUnidad1);
+            this.tabPage17.Controls.Add(this.labelCifraUniad1);
+            this.tabPage17.Location = new System.Drawing.Point(4, 22);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(622, 348);
+            this.tabPage17.TabIndex = 0;
+            this.tabPage17.Text = "Resultado";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Location = new System.Drawing.Point(4, 22);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(622, 348);
+            this.tabPage18.TabIndex = 1;
+            this.tabPage18.Text = "Historial";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // buttonCalcularCifrasUnidad1
+            // 
+            this.buttonCalcularCifrasUnidad1.Location = new System.Drawing.Point(386, 46);
+            this.buttonCalcularCifrasUnidad1.Name = "buttonCalcularCifrasUnidad1";
+            this.buttonCalcularCifrasUnidad1.Size = new System.Drawing.Size(75, 23);
+            this.buttonCalcularCifrasUnidad1.TabIndex = 7;
+            this.buttonCalcularCifrasUnidad1.Text = "Calcular";
+            this.buttonCalcularCifrasUnidad1.UseVisualStyleBackColor = true;
+            this.buttonCalcularCifrasUnidad1.Click += new System.EventHandler(this.buttonCalcularCifrasUnidad1_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(85, 46);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 17);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Cifra:";
+            // 
+            // txtCifraUnidad1
+            // 
+            this.txtCifraUnidad1.Location = new System.Drawing.Point(139, 43);
+            this.txtCifraUnidad1.Name = "txtCifraUnidad1";
+            this.txtCifraUnidad1.Size = new System.Drawing.Size(200, 20);
+            this.txtCifraUnidad1.TabIndex = 0;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(636, 494);
+            this.tabPage15.TabIndex = 1;
+            this.tabPage15.Text = "Exactitud y precisión";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Size = new System.Drawing.Size(636, 494);
+            this.tabPage16.TabIndex = 2;
+            this.tabPage16.Text = "Series de Maclaurin";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // labelInstruccionesUnidad1
+            // 
+            this.labelInstruccionesUnidad1.AutoSize = true;
+            this.labelInstruccionesUnidad1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelInstruccionesUnidad1.Location = new System.Drawing.Point(3, 28);
+            this.labelInstruccionesUnidad1.Name = "labelInstruccionesUnidad1";
+            this.labelInstruccionesUnidad1.Size = new System.Drawing.Size(35, 13);
+            this.labelInstruccionesUnidad1.TabIndex = 4;
+            this.labelInstruccionesUnidad1.Text = "label4";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label15.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(531, 25);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Unidad 1: Introducción a los métodos numéricos";
             // 
             // tabPage2
             // 
@@ -390,52 +540,6 @@
             this.historialDiferenciacionUnidad4.Size = new System.Drawing.Size(622, 292);
             this.historialDiferenciacionUnidad4.TabIndex = 0;
             // 
-            // funcionDataGridViewTextBoxColumn
-            // 
-            this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
-            this.funcionDataGridViewTextBoxColumn.HeaderText = "Funcion";
-            this.funcionDataGridViewTextBoxColumn.Name = "funcionDataGridViewTextBoxColumn";
-            // 
-            // dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn
-            // 
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasProgresivas";
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Progresivas";
-            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
-            // 
-            // tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn
-            // 
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasProgresivas";
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Progresivas";
-            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
-            // 
-            // dosPuntosInfinitasCentradasDataGridViewTextBoxColumn
-            // 
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasCentradas";
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Centradas";
-            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasCentradasDataGridViewTextBoxColumn";
-            // 
-            // tresPuntosInfinitasCentradasDataGridViewTextBoxColumn
-            // 
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasCentradas";
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Centradas";
-            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasCentradasDataGridViewTextBoxColumn";
-            // 
-            // dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn
-            // 
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasRegresivas";
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Regresivas";
-            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
-            // 
-            // tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn
-            // 
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasRegresivas";
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Regresivas";
-            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
-            // 
-            // resultadosBindingSource1
-            // 
-            this.resultadosBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados);
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.txtValorNTrapecio);
@@ -606,28 +710,6 @@
             this.historialTrapecioUnidad4.Name = "historialTrapecioUnidad4";
             this.historialTrapecioUnidad4.Size = new System.Drawing.Size(622, 302);
             this.historialTrapecioUnidad4.TabIndex = 0;
-            // 
-            // funcionDataGridViewTextBoxColumn1
-            // 
-            this.funcionDataGridViewTextBoxColumn1.DataPropertyName = "Funcion";
-            this.funcionDataGridViewTextBoxColumn1.HeaderText = "Funcion";
-            this.funcionDataGridViewTextBoxColumn1.Name = "funcionDataGridViewTextBoxColumn1";
-            // 
-            // simpleDataGridViewTextBoxColumn
-            // 
-            this.simpleDataGridViewTextBoxColumn.DataPropertyName = "Simple";
-            this.simpleDataGridViewTextBoxColumn.HeaderText = "Simple";
-            this.simpleDataGridViewTextBoxColumn.Name = "simpleDataGridViewTextBoxColumn";
-            // 
-            // compuestoDataGridViewTextBoxColumn
-            // 
-            this.compuestoDataGridViewTextBoxColumn.DataPropertyName = "Compuesto";
-            this.compuestoDataGridViewTextBoxColumn.HeaderText = "Compuesto";
-            this.compuestoDataGridViewTextBoxColumn.Name = "compuestoDataGridViewTextBoxColumn";
-            // 
-            // resultadosTrapecioBindingSource
-            // 
-            this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
             // 
             // label1
             // 
@@ -809,21 +891,119 @@
             // 
             // grafica
             // 
-            chartArea1.Name = "ChartArea1";
-            this.grafica.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.grafica.ChartAreas.Add(chartArea2);
             this.grafica.Dock = System.Windows.Forms.DockStyle.Right;
-            legend1.Name = "Legend1";
-            this.grafica.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.grafica.Legends.Add(legend2);
             this.grafica.Location = new System.Drawing.Point(664, 0);
             this.grafica.Name = "grafica";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Funcion";
-            this.grafica.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "Funcion";
+            this.grafica.Series.Add(series2);
             this.grafica.Size = new System.Drawing.Size(376, 590);
             this.grafica.TabIndex = 3;
             this.grafica.Text = "chart1";
+            // 
+            // labelCifraUniad1
+            // 
+            this.labelCifraUniad1.AutoSize = true;
+            this.labelCifraUniad1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCifraUniad1.Location = new System.Drawing.Point(20, 21);
+            this.labelCifraUniad1.Name = "labelCifraUniad1";
+            this.labelCifraUniad1.Size = new System.Drawing.Size(62, 19);
+            this.labelCifraUniad1.TabIndex = 19;
+            this.labelCifraUniad1.Text = "Cifra: ";
+            // 
+            // labelResultadoCifraSignificativaUnidad1
+            // 
+            this.labelResultadoCifraSignificativaUnidad1.AutoSize = true;
+            this.labelResultadoCifraSignificativaUnidad1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultadoCifraSignificativaUnidad1.Location = new System.Drawing.Point(20, 69);
+            this.labelResultadoCifraSignificativaUnidad1.Name = "labelResultadoCifraSignificativaUnidad1";
+            this.labelResultadoCifraSignificativaUnidad1.Size = new System.Drawing.Size(105, 19);
+            this.labelResultadoCifraSignificativaUnidad1.TabIndex = 20;
+            this.labelResultadoCifraSignificativaUnidad1.Text = "Resultado: ";
+            // 
+            // funcionDataGridViewTextBoxColumn
+            // 
+            this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn.Name = "funcionDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasProgresivas";
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Progresivas";
+            this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasProgresivas";
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Progresivas";
+            this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasCentradasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasCentradas";
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Centradas";
+            this.dosPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasCentradasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasCentradasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasCentradas";
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Centradas";
+            this.tresPuntosInfinitasCentradasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasCentradasDataGridViewTextBoxColumn";
+            // 
+            // dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn
+            // 
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "DosPuntosInfinitasRegresivas";
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Dos Puntos Infinitas Regresivas";
+            this.dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "dosPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
+            // 
+            // tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn
+            // 
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.DataPropertyName = "TresPuntosInfinitasRegresivas";
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.HeaderText = "Tres Puntos Infinitas Regresivas";
+            this.tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn.Name = "tresPuntosInfinitasRegresivasDataGridViewTextBoxColumn";
+            // 
+            // resultadosBindingSource1
+            // 
+            this.resultadosBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados);
+            // 
+            // funcionDataGridViewTextBoxColumn1
+            // 
+            this.funcionDataGridViewTextBoxColumn1.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn1.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn1.Name = "funcionDataGridViewTextBoxColumn1";
+            // 
+            // simpleDataGridViewTextBoxColumn
+            // 
+            this.simpleDataGridViewTextBoxColumn.DataPropertyName = "Simple";
+            this.simpleDataGridViewTextBoxColumn.HeaderText = "Simple";
+            this.simpleDataGridViewTextBoxColumn.Name = "simpleDataGridViewTextBoxColumn";
+            // 
+            // compuestoDataGridViewTextBoxColumn
+            // 
+            this.compuestoDataGridViewTextBoxColumn.DataPropertyName = "Compuesto";
+            this.compuestoDataGridViewTextBoxColumn.HeaderText = "Compuesto";
+            this.compuestoDataGridViewTextBoxColumn.Name = "compuestoDataGridViewTextBoxColumn";
+            // 
+            // resultadosTrapecioBindingSource
+            // 
+            this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
+            // 
+            // labelNotacionCientificaUnidad1
+            // 
+            this.labelNotacionCientificaUnidad1.AutoSize = true;
+            this.labelNotacionCientificaUnidad1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotacionCientificaUnidad1.Location = new System.Drawing.Point(20, 147);
+            this.labelNotacionCientificaUnidad1.Name = "labelNotacionCientificaUnidad1";
+            this.labelNotacionCientificaUnidad1.Size = new System.Drawing.Size(170, 19);
+            this.labelNotacionCientificaUnidad1.TabIndex = 21;
+            this.labelNotacionCientificaUnidad1.Text = "Notación cientifica:";
             // 
             // Inicio
             // 
@@ -836,6 +1016,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Métodos Numéricos";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
+            this.tabControl4.ResumeLayout(false);
+            this.tabPage17.ResumeLayout(false);
+            this.tabPage17.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -848,7 +1036,6 @@
             this.tabPage10.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialDiferenciacionUnidad4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabHistorialTrapecio.ResumeLayout(false);
@@ -856,7 +1043,6 @@
             this.tabPage8.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialTrapecioUnidad4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabHistoialUnidad5.ResumeLayout(false);
@@ -866,6 +1052,8 @@
             this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -942,5 +1130,20 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.DataGridView historialUnidad5;
+        private System.Windows.Forms.Label labelInstruccionesUnidad1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.Button buttonCalcularCifrasUnidad1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtCifraUnidad1;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.Label labelResultadoCifraSignificativaUnidad1;
+        private System.Windows.Forms.Label labelCifraUniad1;
+        private System.Windows.Forms.Label labelNotacionCientificaUnidad1;
     }
 }

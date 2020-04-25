@@ -12,6 +12,7 @@ using MetodosNumericos.src.herramientas.objetos.Unidad4;
 using MetodosNumericos.src.herramientas.objetos.Unidad_4;
 using System.Windows.Forms.DataVisualization.Charting;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
+using MetodosNumericos.src.herramientas.objetos.Unidad_1;
 
 namespace MetodosNumericos.src.vistas
 {
@@ -23,6 +24,9 @@ namespace MetodosNumericos.src.vistas
         public Inicio()
         {
             InitializeComponent();
+            labelInstruccionesUnidad1.Text = "Daremos una breve introducción a los metodos numéricos con una simple explicación de "+
+                "\nun programa que nos ayude a calcular las cifras significativas que tiene una cierta cantidad, tambien vamos a calcular la precisión "+
+                "\ny la exactitud de un conjunto de datos generados aleatoriamente, además de calcular el valor de euler con series de Maclautrin";
             labelInstruccionesUnidad4.Text = "Calcularemos laa integral y la derivada e funciones, es por ello que tenemos dos secciones." +
                 "\nEn la primera \"Diferenciación\" podrás encontrar tres cajas de texto, donde introducirás tu función y el valor correspondiente a h y a x0\npara poder calcular la derivada.\n " +
                 "\nEn la segunda \"Trapecio simple y compuesto\" podrémos encontrar tres cajas de texto donde se introducirán la funcion y los intervalos\n de esta para poder calcular la integral";
@@ -31,6 +35,36 @@ namespace MetodosNumericos.src.vistas
                 "\n\nLas aplicaciones de esto suelen ser en la predicción de datos a partir de un conjunto de datos, como lo puede ser en la economía";
         }
 
+        //////////////
+        ///Unidad 1///
+        //////////////
+        private void buttonCalcularCifrasUnidad1_Click(object sender, EventArgs e)
+        {
+            String cifra = txtCifraUnidad1.Text;
+            
+            ModeloCifrasSignificativas cifrasSignificativas = new ModeloCifrasSignificativas(cifra);
+            labelCifraUniad1.Text = "Cifra: " + cifra;
+            var resultados = cifrasSignificativas.resultados();
+            if (resultados[0] != resultados[1])
+            {
+                labelResultadoCifraSignificativaUnidad1.Text = "Resultado: esta cantidad tiene " + resultados[0] + " y " + resultados[1] + " Cifras significativas";
+            }
+            else
+            {
+                labelResultadoCifraSignificativaUnidad1.Text = "Resultado: esta cantidad tiene " + resultados[0] + " Cifras significativas";
+            }
+
+            MessageBox.Show(cifrasSignificativas.notacionCientifica());
+            labelNotacionCientificaUnidad1.Text = "Notación cientifica: ";
+        }
+
+
+        //////////////
+        ///Unidad 2///
+        //////////////
+        //////////////
+        ///Unidad 3///
+        //////////////
         //////////////
         ///Unidad 4///
         //////////////
@@ -172,6 +206,8 @@ namespace MetodosNumericos.src.vistas
             catch { }
             
         }
+
+        
 
     }
 }
