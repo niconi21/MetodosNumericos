@@ -1,4 +1,5 @@
-﻿using MetodosNumericos.src.herramientas.objetos.Unidad_4;
+﻿using MetodosNumericos.src.herramientas.objetos.Unidad_1;
+using MetodosNumericos.src.herramientas.objetos.Unidad_4;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,39 @@ namespace MetodosNumericos.src.herramientas.objetos
     public class EscrituraLectura
     {
         private String _ruta = @"C:\\Pruebas\Historial\";
-
+        ////////////////
+        ////unidad 1////
+        ////////////////
+        public void escribirCifrasSignificativas(ResultadoCifraSignificativas resultados)
+        {
+            StreamWriter sw = new StreamWriter(_ruta + "CifrasSignificativas_Unidad1.txt",true);
+            sw.WriteLine(resultados.numero + "," + resultados.cantidadCifras + "," + resultados.notacionCientifica);
+            sw.Close();
+        }
+        public List<ResultadoCifraSignificativas> leerCifrasSignificativas()
+        {
+            StreamReader sr = new StreamReader(_ruta + "CifrasSignificativas_Unidad1.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            List<ResultadoCifraSignificativas> resultados = new List<ResultadoCifraSignificativas>();
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoCifraSignificativas
+                    {
+                        numero = datos[0],
+                        cantidadCifras = datos[1],
+                        notacionCientifica = datos[2]
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
+        ////////////////
+        ////unidad 4////
+        ////////////////
         public void escribirDiferenciacionUnidad4(Resultados resultados)
         {
             StreamWriter sr = new StreamWriter(_ruta + "Diferenciacion_Unidad4.txt", true);
@@ -25,7 +58,6 @@ namespace MetodosNumericos.src.herramientas.objetos
                          resultados.TresPuntosInfinitasRegresivas);
             sr.Close();
         }
-
         public List<Resultados> leerDiferenciacionUnidad4()
         {
             List<Resultados> resultados = new List<Resultados>();
@@ -51,7 +83,6 @@ namespace MetodosNumericos.src.herramientas.objetos
             }   
             return resultados;
         }
-
         public void escribirTrapecioUnidad4(ResultadosTrapecio resultados)
         {
             StreamWriter sw = new StreamWriter(_ruta + "Trapecio_unidad4.txt",true);
@@ -60,7 +91,6 @@ namespace MetodosNumericos.src.herramientas.objetos
                         resultados.Compuesto);
             sw.Close();
         }
-
         public List<ResultadosTrapecio> leerTrapecioUnidad4()
         {
             List<ResultadosTrapecio> resultados = new List<ResultadosTrapecio>();
@@ -82,7 +112,9 @@ namespace MetodosNumericos.src.herramientas.objetos
             }
             return resultados;
         }
-
+        ////////////////
+        ////unidad 4////
+        ////////////////
         public void escribirLangrageUnidad5(ResultadoLangrage resultados)
         {
             String datos = resultados.Funcion;
@@ -102,7 +134,6 @@ namespace MetodosNumericos.src.herramientas.objetos
             sw.WriteLine(datos);
             sw.Close();
         }
-
         public List<ResultadoLangrage> leerLangrageUnidad5()
         {
             List<ResultadoLangrage> resultados = new List<ResultadoLangrage>();

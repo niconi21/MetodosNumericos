@@ -51,6 +51,8 @@
     <Compile Include="src\herramientas\objetos\Funcion.cs" />
     <Compile Include="src\herramientas\objetos\Modelo.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 1\ModeloCifrasSignificativas.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 1\ModeloExactitudPrecision.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 1\ResultadoCifraSignificativas.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloDiferenciacionNumerica.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloTrapecio.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\Resultados.cs" />

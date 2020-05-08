@@ -48,16 +48,54 @@ namespace MetodosNumericos.src.vistas
             if (resultados[0] != resultados[1])
             {
                 labelResultadoCifraSignificativaUnidad1.Text = "Resultado: esta cantidad tiene " + resultados[0] + " y " + resultados[1] + " Cifras significativas";
+
             }
             else
             {
                 labelResultadoCifraSignificativaUnidad1.Text = "Resultado: esta cantidad tiene " + resultados[0] + " Cifras significativas";
             }
-
-            MessageBox.Show(cifrasSignificativas.notacionCientifica());
-            labelNotacionCientificaUnidad1.Text = "Notación cientifica: ";
+            labelNotacionCientificaUnidad1.Text = "Notación cientifica: " + cifrasSignificativas.notacionCientifica();
+            ResultadoCifraSignificativas resultadoOperaciones = new ResultadoCifraSignificativas
+            {
+                numero = cifra,
+                cantidadCifras = labelResultadoCifraSignificativaUnidad1.Text,
+                notacionCientifica = labelNotacionCientificaUnidad1.Text
+            };
+            (new EscrituraLectura()).escribirCifrasSignificativas(resultadoOperaciones);
         }
+        private void tab_resultados_cifrasSignificativas_unidad1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tabla_cifrasSignificativas.DataSource = (new EscrituraLectura()).leerCifrasSignificativas();
+            }
+            catch { }
+        }
+        private void btn_calcular_ExtactitudPrecision_Click(object sender, EventArgs e)
+        {
+            int limite = int.Parse(txt_limite_exactitudPrecision_unidad1.Text);
+            int porcentaje = int.Parse(txt_porcentaje_exactitudPrecision.Text);
+            this._modelo = new ModeloExactitudPrecision(limite);
+            tabla_exactitudprecision.DataSource = ((ModeloExactitudPrecision)_modelo).getNumeros();
+            label_limite_unidad1.Text = limite.ToString();
+            var resultados = ((ModeloExactitudPrecision)_modelo).resultados();
+            if ((int)resultados[0] > porcentaje)
+                label_exactitud_unidad1.Text = "Exactitud: " + resultados[0] + "%\n Es exacto";
+            else
+                label_exactitud_unidad1.Text = "Exactitud: " + resultados[0] + "%\n No es exacto";
+            if((int) resultados[1]>porcentaje)
+                label_precision_unidad1.Text = "Precisión: " + resultados[1] + "%\n Es preciso";
+            else
+                label_precision_unidad1.Text = "Precisión: " + resultados[1] + "%\n No es preciso";
+            var puntos = ((ModeloExactitudPrecision)_modelo).getNumeros();
+            grafica.Series[0].Points.Clear();
+            grafica.Series[0].ChartType = SeriesChartType.Point;
+            foreach (var punto in puntos)
+            {
+                grafica.Series[0].Points.AddY(punto);
 
+            }
+        }
 
         //////////////
         ///Unidad 2///
@@ -106,7 +144,6 @@ namespace MetodosNumericos.src.vistas
             _escribirLeer.escribirDiferenciacionUnidad4(guardarDatos);
             grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 4\Diferenciacion Numerica\" + funcion + ".png", ChartImageFormat.Png);
         }
-
         private void tabHistorial_Click(object sender, EventArgs e)
         {
             try
@@ -116,7 +153,6 @@ namespace MetodosNumericos.src.vistas
             }
             catch { }
         }
-
         private void btnTrapecioUnidad4_Click(object sender, EventArgs e)
         {
             String funcion = txtFuncionUnidad4.Text;
@@ -154,7 +190,6 @@ namespace MetodosNumericos.src.vistas
             }
             catch {}
         }
-
         //////////////
         ///Unidad 5///
         //////////////
@@ -194,8 +229,6 @@ namespace MetodosNumericos.src.vistas
             _cantidadImagenes++;
             grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 5\Lagrange\" + _cantidadImagenes + ".png", ChartImageFormat.Png);
         }
-
-
         private void tabHistoialUnidad5_Click(object sender, EventArgs e)
         {
             try
@@ -206,8 +239,5 @@ namespace MetodosNumericos.src.vistas
             catch { }
             
         }
-
-        
-
     }
 }

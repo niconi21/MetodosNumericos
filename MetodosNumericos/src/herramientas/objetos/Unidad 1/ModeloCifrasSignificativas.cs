@@ -55,7 +55,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             bool cerosIzquierda = true;
             foreach (var cifra in cifras)
             {
-                if (cifra != '0' && cifra != '.')
+                if (cifra != '0')
                 {
                     cerosIzquierda = false;
                 }
@@ -64,59 +64,42 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
                     cifrasSinCerosIzquierda += cifra;
                 }
             }
-
-            bool cerosDerecha = true;
-            bool puntoDecimal = false;
-            String cifrasSinCerosDerecha = "";
-            for (int i = cifrasSinCerosIzquierda.Length - 1; i >= 0; i--)
+            String notacionCientifica = "";
+            String auxCifra = "";
+            int exponente = 1;
+            if (cifrasSinCerosIzquierda.ElementAt(0) == '.')
             {
-                if (cifrasSinCerosIzquierda[i] != '0')
+                bool cerosDerecha = true;
+                for (int i = 1; i < cifrasSinCerosIzquierda.Length; i++)
                 {
-                    cerosDerecha = false;
-                }
-                if (!cerosDerecha)
-                {
-                    cifrasSinCerosDerecha += cifrasSinCerosIzquierda[i];
-                    if (cifrasSinCerosIzquierda[i] == '.')
-                        puntoDecimal = true;
-                }
-            }
-            String cifrasSinCeros = "";
-            for (int i = cifrasSinCerosDerecha.Length - 1; i >= 0; i--)
-            {
-                cifrasSinCeros += cifrasSinCerosDerecha[i];
-            }
-            int exponente = 0;
-            String baseNotacionCientifica = "";
-            MessageBox.Show(cifrasSinCeros);
-            if (cifrasSinCeros[0] != '.')
-            {
-                baseNotacionCientifica = cifrasSinCeros[0] + ".";
-                bool puntoDecimanEncontrado = false;
-                for (int i = 1; i < cifrasSinCeros.Length; i++)
-                {
-                    if (cifrasSinCeros[i] == '.')
-                        puntoDecimanEncontrado = true;
-                    if (cifrasSinCeros[i] != '.' && !puntoDecimanEncontrado)
+                    if (i == 2)
+                        auxCifra += "." + cifrasSinCerosIzquierda[i];
+                    else
                     {
-                        exponente++;
+                        auxCifra += cifrasSinCerosIzquierda[i];
+                        if (cifrasSinCerosIzquierda[i] != '0')
+                            cerosDerecha = false;
                     }
-                    if (cifrasSinCeros[i] != '.')
-                        baseNotacionCientifica += cifrasSinCeros[i];
+                    if (cifrasSinCerosIzquierda[i] == '0' && cerosDerecha)
+                        exponente++;
                 }
+                notacionCientifica = auxCifra + "x 10^-" + exponente;
             }
             else
             {
- 
-                
-                foreach (var cifra in cifrasSinCeros)
+                exponente = 0;
+                notacionCientifica += cifrasSinCerosIzquierda[0] + ".";
+                for (int i = 1; i < cifrasSinCerosIzquierda.Length ; i++)
                 {
-                    if (cifra == '.')
-                        continue;
-                    baseNotacionCientifica += cifra;
+                    if (cifrasSinCerosIzquierda[i] != '.')
+                    {
+                        notacionCientifica += cifrasSinCerosIzquierda[i];
+                        exponente++;
+                    }
                 }
+                notacionCientifica += "x 10 ^" + exponente;
             }
-            return baseNotacionCientifica + " x 10^" + exponente;
+            return notacionCientifica;
         }
         public override float[] resultados()
         {
