@@ -62,6 +62,17 @@
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.HistorialPrecisionExactitud = new System.Windows.Forms.DataGridView();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtCifrasSignificativasSerieMaclaurin = new System.Windows.Forms.TextBox();
+            this.btnCalcularSerieMaclaurin = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtExponenteSerieMaclaurin = new System.Windows.Forms.TextBox();
+            this.tabHistorialSerieMaclaurin = new System.Windows.Forms.TabControl();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.tablaSerieMaclaurin = new System.Windows.Forms.DataGridView();
+            this.labelResultadosSerieMaclaurin = new System.Windows.Forms.Label();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.historialSerieMaclaurin = new System.Windows.Forms.DataGridView();
             this.labelInstruccionesUnidad1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -120,8 +131,25 @@
             this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.exponente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoExactitudPrecisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.limiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.porcentajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exactitudDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoExactitudPrecisionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.valorAproximadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorVerdaderoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorPorcentalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoSerieMaclaurinBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.valorVerdaderoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorAproximadoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorVerdaderoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorPorcentalDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toleranciaPorcentualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,11 +162,6 @@
             this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resultadoExactitudPrecisionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.limiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.porcentajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exactitudDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -153,6 +176,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_exactitudprecision)).BeginInit();
             this.tabPage20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HistorialPrecisionExactitud)).BeginInit();
+            this.tabPage16.SuspendLayout();
+            this.tabHistorialSerieMaclaurin.SuspendLayout();
+            this.tabPage21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaSerieMaclaurin)).BeginInit();
+            this.tabPage22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historialSerieMaclaurin)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -174,9 +203,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -502,12 +532,141 @@
             // 
             // tabPage16
             // 
+            this.tabPage16.Controls.Add(this.label23);
+            this.tabPage16.Controls.Add(this.txtCifrasSignificativasSerieMaclaurin);
+            this.tabPage16.Controls.Add(this.btnCalcularSerieMaclaurin);
+            this.tabPage16.Controls.Add(this.label24);
+            this.tabPage16.Controls.Add(this.txtExponenteSerieMaclaurin);
+            this.tabPage16.Controls.Add(this.tabHistorialSerieMaclaurin);
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Size = new System.Drawing.Size(636, 494);
             this.tabPage16.TabIndex = 2;
             this.tabPage16.Text = "Series de Maclaurin";
             this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(75, 71);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(239, 17);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "Cantidad de cifras significativas:";
+            // 
+            // txtCifrasSignificativasSerieMaclaurin
+            // 
+            this.txtCifrasSignificativasSerieMaclaurin.Location = new System.Drawing.Point(315, 71);
+            this.txtCifrasSignificativasSerieMaclaurin.Name = "txtCifrasSignificativasSerieMaclaurin";
+            this.txtCifrasSignificativasSerieMaclaurin.Size = new System.Drawing.Size(200, 20);
+            this.txtCifrasSignificativasSerieMaclaurin.TabIndex = 18;
+            // 
+            // btnCalcularSerieMaclaurin
+            // 
+            this.btnCalcularSerieMaclaurin.Location = new System.Drawing.Point(319, 97);
+            this.btnCalcularSerieMaclaurin.Name = "btnCalcularSerieMaclaurin";
+            this.btnCalcularSerieMaclaurin.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularSerieMaclaurin.TabIndex = 17;
+            this.btnCalcularSerieMaclaurin.Text = "Calcular";
+            this.btnCalcularSerieMaclaurin.UseVisualStyleBackColor = true;
+            this.btnCalcularSerieMaclaurin.Click += new System.EventHandler(this.btnCalcularSerieMaclaurin_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(229, 33);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(85, 17);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "Valor de x:";
+            // 
+            // txtExponenteSerieMaclaurin
+            // 
+            this.txtExponenteSerieMaclaurin.Location = new System.Drawing.Point(315, 33);
+            this.txtExponenteSerieMaclaurin.Name = "txtExponenteSerieMaclaurin";
+            this.txtExponenteSerieMaclaurin.Size = new System.Drawing.Size(200, 20);
+            this.txtExponenteSerieMaclaurin.TabIndex = 15;
+            // 
+            // tabHistorialSerieMaclaurin
+            // 
+            this.tabHistorialSerieMaclaurin.Controls.Add(this.tabPage21);
+            this.tabHistorialSerieMaclaurin.Controls.Add(this.tabPage22);
+            this.tabHistorialSerieMaclaurin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabHistorialSerieMaclaurin.Location = new System.Drawing.Point(0, 120);
+            this.tabHistorialSerieMaclaurin.Name = "tabHistorialSerieMaclaurin";
+            this.tabHistorialSerieMaclaurin.SelectedIndex = 0;
+            this.tabHistorialSerieMaclaurin.Size = new System.Drawing.Size(636, 374);
+            this.tabHistorialSerieMaclaurin.TabIndex = 10;
+            this.tabHistorialSerieMaclaurin.Click += new System.EventHandler(this.tabHistorialSerieMaclaurin_Click);
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.tablaSerieMaclaurin);
+            this.tabPage21.Controls.Add(this.labelResultadosSerieMaclaurin);
+            this.tabPage21.Location = new System.Drawing.Point(4, 22);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage21.Size = new System.Drawing.Size(628, 348);
+            this.tabPage21.TabIndex = 0;
+            this.tabPage21.Text = "Resultado";
+            this.tabPage21.UseVisualStyleBackColor = true;
+            // 
+            // tablaSerieMaclaurin
+            // 
+            this.tablaSerieMaclaurin.AutoGenerateColumns = false;
+            this.tablaSerieMaclaurin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaSerieMaclaurin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.valorAproximadoDataGridViewTextBoxColumn,
+            this.errorVerdaderoDataGridViewTextBoxColumn,
+            this.errorPorcentalDataGridViewTextBoxColumn,
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn});
+            this.tablaSerieMaclaurin.DataSource = this.resultadoSerieMaclaurinBindingSource;
+            this.tablaSerieMaclaurin.Location = new System.Drawing.Point(18, 66);
+            this.tablaSerieMaclaurin.Name = "tablaSerieMaclaurin";
+            this.tablaSerieMaclaurin.Size = new System.Drawing.Size(591, 279);
+            this.tablaSerieMaclaurin.TabIndex = 22;
+            // 
+            // labelResultadosSerieMaclaurin
+            // 
+            this.labelResultadosSerieMaclaurin.AutoSize = true;
+            this.labelResultadosSerieMaclaurin.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultadosSerieMaclaurin.Location = new System.Drawing.Point(20, 21);
+            this.labelResultadosSerieMaclaurin.Name = "labelResultadosSerieMaclaurin";
+            this.labelResultadosSerieMaclaurin.Size = new System.Drawing.Size(134, 19);
+            this.labelResultadosSerieMaclaurin.TabIndex = 19;
+            this.labelResultadosSerieMaclaurin.Text = "Resultados de:";
+            // 
+            // tabPage22
+            // 
+            this.tabPage22.Controls.Add(this.historialSerieMaclaurin);
+            this.tabPage22.Location = new System.Drawing.Point(4, 22);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage22.Size = new System.Drawing.Size(628, 348);
+            this.tabPage22.TabIndex = 1;
+            this.tabPage22.Text = "Historial";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // historialSerieMaclaurin
+            // 
+            this.historialSerieMaclaurin.AutoGenerateColumns = false;
+            this.historialSerieMaclaurin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.historialSerieMaclaurin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.exponente,
+            this.valorVerdaderoDataGridViewTextBoxColumn,
+            this.valorAproximadoDataGridViewTextBoxColumn1,
+            this.errorVerdaderoDataGridViewTextBoxColumn1,
+            this.errorPorcentalDataGridViewTextBoxColumn1,
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn1,
+            this.toleranciaPorcentualDataGridViewTextBoxColumn});
+            this.historialSerieMaclaurin.DataSource = this.resultadoSerieMaclaurinBindingSource;
+            this.historialSerieMaclaurin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historialSerieMaclaurin.Location = new System.Drawing.Point(3, 3);
+            this.historialSerieMaclaurin.Name = "historialSerieMaclaurin";
+            this.historialSerieMaclaurin.Size = new System.Drawing.Size(622, 342);
+            this.historialSerieMaclaurin.TabIndex = 0;
             // 
             // labelInstruccionesUnidad1
             // 
@@ -1136,6 +1295,12 @@
             this.grafica.TabIndex = 3;
             this.grafica.Text = "chart1";
             // 
+            // exponente
+            // 
+            this.exponente.DataPropertyName = "exponente";
+            this.exponente.HeaderText = "Exponente";
+            this.exponente.Name = "exponente";
+            // 
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
@@ -1145,6 +1310,98 @@
             // resultadoExactitudPrecisionBindingSource
             // 
             this.resultadoExactitudPrecisionBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoExactitudPrecision);
+            // 
+            // limiteDataGridViewTextBoxColumn
+            // 
+            this.limiteDataGridViewTextBoxColumn.DataPropertyName = "limite";
+            this.limiteDataGridViewTextBoxColumn.HeaderText = "limite";
+            this.limiteDataGridViewTextBoxColumn.Name = "limiteDataGridViewTextBoxColumn";
+            // 
+            // porcentajeDataGridViewTextBoxColumn
+            // 
+            this.porcentajeDataGridViewTextBoxColumn.DataPropertyName = "porcentaje";
+            this.porcentajeDataGridViewTextBoxColumn.HeaderText = "porcentaje";
+            this.porcentajeDataGridViewTextBoxColumn.Name = "porcentajeDataGridViewTextBoxColumn";
+            // 
+            // exactitudDataGridViewTextBoxColumn
+            // 
+            this.exactitudDataGridViewTextBoxColumn.DataPropertyName = "exactitud";
+            this.exactitudDataGridViewTextBoxColumn.HeaderText = "exactitud";
+            this.exactitudDataGridViewTextBoxColumn.Name = "exactitudDataGridViewTextBoxColumn";
+            // 
+            // precisionDataGridViewTextBoxColumn
+            // 
+            this.precisionDataGridViewTextBoxColumn.DataPropertyName = "precision";
+            this.precisionDataGridViewTextBoxColumn.HeaderText = "precision";
+            this.precisionDataGridViewTextBoxColumn.Name = "precisionDataGridViewTextBoxColumn";
+            // 
+            // resultadoExactitudPrecisionBindingSource1
+            // 
+            this.resultadoExactitudPrecisionBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoExactitudPrecision);
+            // 
+            // valorAproximadoDataGridViewTextBoxColumn
+            // 
+            this.valorAproximadoDataGridViewTextBoxColumn.DataPropertyName = "valorAproximado";
+            this.valorAproximadoDataGridViewTextBoxColumn.HeaderText = "valor Aproximado";
+            this.valorAproximadoDataGridViewTextBoxColumn.Name = "valorAproximadoDataGridViewTextBoxColumn";
+            // 
+            // errorVerdaderoDataGridViewTextBoxColumn
+            // 
+            this.errorVerdaderoDataGridViewTextBoxColumn.DataPropertyName = "ErrorVerdadero";
+            this.errorVerdaderoDataGridViewTextBoxColumn.HeaderText = "Error Verdadero";
+            this.errorVerdaderoDataGridViewTextBoxColumn.Name = "errorVerdaderoDataGridViewTextBoxColumn";
+            // 
+            // errorPorcentalDataGridViewTextBoxColumn
+            // 
+            this.errorPorcentalDataGridViewTextBoxColumn.DataPropertyName = "ErrorPorcental";
+            this.errorPorcentalDataGridViewTextBoxColumn.HeaderText = "Error Porcental";
+            this.errorPorcentalDataGridViewTextBoxColumn.Name = "errorPorcentalDataGridViewTextBoxColumn";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn.HeaderText = "Error Relativo Porcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn";
+            // 
+            // resultadoSerieMaclaurinBindingSource
+            // 
+            this.resultadoSerieMaclaurinBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoSerieMaclaurin);
+            // 
+            // valorVerdaderoDataGridViewTextBoxColumn
+            // 
+            this.valorVerdaderoDataGridViewTextBoxColumn.DataPropertyName = "valorVerdadero";
+            this.valorVerdaderoDataGridViewTextBoxColumn.HeaderText = "valor Verdadero";
+            this.valorVerdaderoDataGridViewTextBoxColumn.Name = "valorVerdaderoDataGridViewTextBoxColumn";
+            // 
+            // valorAproximadoDataGridViewTextBoxColumn1
+            // 
+            this.valorAproximadoDataGridViewTextBoxColumn1.DataPropertyName = "valorAproximado";
+            this.valorAproximadoDataGridViewTextBoxColumn1.HeaderText = "valor Aproximado";
+            this.valorAproximadoDataGridViewTextBoxColumn1.Name = "valorAproximadoDataGridViewTextBoxColumn1";
+            // 
+            // errorVerdaderoDataGridViewTextBoxColumn1
+            // 
+            this.errorVerdaderoDataGridViewTextBoxColumn1.DataPropertyName = "ErrorVerdadero";
+            this.errorVerdaderoDataGridViewTextBoxColumn1.HeaderText = "Error Verdadero";
+            this.errorVerdaderoDataGridViewTextBoxColumn1.Name = "errorVerdaderoDataGridViewTextBoxColumn1";
+            // 
+            // errorPorcentalDataGridViewTextBoxColumn1
+            // 
+            this.errorPorcentalDataGridViewTextBoxColumn1.DataPropertyName = "ErrorPorcental";
+            this.errorPorcentalDataGridViewTextBoxColumn1.HeaderText = "Error Porcental";
+            this.errorPorcentalDataGridViewTextBoxColumn1.Name = "errorPorcentalDataGridViewTextBoxColumn1";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn1
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn1.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn1.HeaderText = "Error RelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn1.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn1";
+            // 
+            // toleranciaPorcentualDataGridViewTextBoxColumn
+            // 
+            this.toleranciaPorcentualDataGridViewTextBoxColumn.DataPropertyName = "ToleranciaPorcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn.HeaderText = "Tolerancia Porcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn.Name = "toleranciaPorcentualDataGridViewTextBoxColumn";
             // 
             // funcionDataGridViewTextBoxColumn
             // 
@@ -1214,34 +1471,6 @@
             // 
             this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
             // 
-            // resultadoExactitudPrecisionBindingSource1
-            // 
-            this.resultadoExactitudPrecisionBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoExactitudPrecision);
-            // 
-            // limiteDataGridViewTextBoxColumn
-            // 
-            this.limiteDataGridViewTextBoxColumn.DataPropertyName = "limite";
-            this.limiteDataGridViewTextBoxColumn.HeaderText = "limite";
-            this.limiteDataGridViewTextBoxColumn.Name = "limiteDataGridViewTextBoxColumn";
-            // 
-            // porcentajeDataGridViewTextBoxColumn
-            // 
-            this.porcentajeDataGridViewTextBoxColumn.DataPropertyName = "porcentaje";
-            this.porcentajeDataGridViewTextBoxColumn.HeaderText = "porcentaje";
-            this.porcentajeDataGridViewTextBoxColumn.Name = "porcentajeDataGridViewTextBoxColumn";
-            // 
-            // exactitudDataGridViewTextBoxColumn
-            // 
-            this.exactitudDataGridViewTextBoxColumn.DataPropertyName = "exactitud";
-            this.exactitudDataGridViewTextBoxColumn.HeaderText = "exactitud";
-            this.exactitudDataGridViewTextBoxColumn.Name = "exactitudDataGridViewTextBoxColumn";
-            // 
-            // precisionDataGridViewTextBoxColumn
-            // 
-            this.precisionDataGridViewTextBoxColumn.DataPropertyName = "precision";
-            this.precisionDataGridViewTextBoxColumn.HeaderText = "precision";
-            this.precisionDataGridViewTextBoxColumn.Name = "precisionDataGridViewTextBoxColumn";
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1271,6 +1500,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabla_exactitudprecision)).EndInit();
             this.tabPage20.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HistorialPrecisionExactitud)).EndInit();
+            this.tabPage16.ResumeLayout(false);
+            this.tabPage16.PerformLayout();
+            this.tabHistorialSerieMaclaurin.ResumeLayout(false);
+            this.tabPage21.ResumeLayout(false);
+            this.tabPage21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaSerieMaclaurin)).EndInit();
+            this.tabPage22.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.historialSerieMaclaurin)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -1300,9 +1537,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1416,5 +1654,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn exactitudDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precisionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource resultadoExactitudPrecisionBindingSource1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtCifrasSignificativasSerieMaclaurin;
+        private System.Windows.Forms.Button btnCalcularSerieMaclaurin;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtExponenteSerieMaclaurin;
+        private System.Windows.Forms.TabControl tabHistorialSerieMaclaurin;
+        private System.Windows.Forms.TabPage tabPage21;
+        private System.Windows.Forms.DataGridView tablaSerieMaclaurin;
+        private System.Windows.Forms.Label labelResultadosSerieMaclaurin;
+        private System.Windows.Forms.TabPage tabPage22;
+        private System.Windows.Forms.DataGridView historialSerieMaclaurin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorAproximadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorVerdaderoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorPorcentalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource resultadoSerieMaclaurinBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exponente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorVerdaderoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorAproximadoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorVerdaderoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorPorcentalDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn toleranciaPorcentualDataGridViewTextBoxColumn;
     }
 }

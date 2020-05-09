@@ -94,7 +94,7 @@ namespace MetodosNumericos.src.vistas
             {
                 grafica.Series[0].Points.AddY(punto.numero);
             }
-            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 5\Lagrange\" + limite, ChartImageFormat.Png);
+            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 5\Lagrange\" + limite + ".png", ChartImageFormat.Png);
             ResultadoExactitudPrecision resultado = new ResultadoExactitudPrecision
             {
                 limite = limite,
@@ -109,6 +109,32 @@ namespace MetodosNumericos.src.vistas
             try
             {
                 HistorialPrecisionExactitud.DataSource = (new EscrituraLectura()).leerPrecisionExactitud();
+            }
+            catch { }
+        }
+        private void btnCalcularSerieMaclaurin_Click(object sender, EventArgs e)
+        {
+            float exponente = float.Parse(txtExponenteSerieMaclaurin.Text);
+            int cifrasSignificativas = int.Parse(txtCifrasSignificativasSerieMaclaurin.Text);
+            _modelo = new ModeloSerieMaclaurin(exponente,cifrasSignificativas);
+            var resultados = ((ModeloSerieMaclaurin)_modelo).resultado();
+            labelResultadosSerieMaclaurin.Text = "Resultados de e^" + exponente;
+            tablaSerieMaclaurin.DataSource = resultados;
+            grafica.Series[0].ChartType = SeriesChartType.Spline;
+            grafica.Series[0].Points.Clear();
+            var puntos = ((ModeloSerieMaclaurin)_modelo).puntos();
+            foreach (var punto in puntos)
+            {
+                grafica.Series[0].Points.AddY(punto);
+            }
+            grafica.SaveImage(@"C:\\Pruebas\Historial\Unidad 1\Serie de Maclaurin\" + "e^" + exponente + " - " + "n vale " + cifrasSignificativas + ".png", ChartImageFormat.Png);
+            _escribirLeer.escribirSerieMaclaurin(resultados.ElementAt(resultados.Count-1));
+        }
+        private void tabHistorialSerieMaclaurin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.historialSerieMaclaurin.DataSource = _escribirLeer.leerSerieMaclaurin();
             }
             catch { }
         }
@@ -156,8 +182,9 @@ namespace MetodosNumericos.src.vistas
                 DosPuntosInfinitasRegresivas = resultados[4],
                 TresPuntosInfinitasRegresivas = resultados[5],
             }; 
-            _escribirLeer.escribirDiferenciacionUnidad4(guardarDatos);
             grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 4\Diferenciacion Numerica\" + funcion + ".png", ChartImageFormat.Png);
+            _escribirLeer.escribirDiferenciacionUnidad4(guardarDatos);
+
         }
         private void tabHistorial_Click(object sender, EventArgs e)
         {
@@ -254,6 +281,8 @@ namespace MetodosNumericos.src.vistas
             catch { }
             
         }
+
+
 
         
     }

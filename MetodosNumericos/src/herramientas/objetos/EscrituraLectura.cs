@@ -71,6 +71,43 @@ namespace MetodosNumericos.src.herramientas.objetos
             sr.Close();
             return resultados;
         }
+        public void escribirSerieMaclaurin(ResultadoSerieMaclaurin resultado)
+        {
+            StreamWriter sw = new StreamWriter(_ruta + "SerieMaclaurin_Unidad1.txt", true);
+            sw.WriteLine(resultado.exponente + "," +
+                         resultado.valorVerdadero + "," +
+                         resultado.valorAproximado + "," +
+                         resultado.ErrorVerdadero + "," +
+                         resultado.ErrorPorcental + "," +
+                         resultado.ErrorRelativoPorcentual+ "," +
+                         resultado.ToleranciaPorcentual);
+            sw.Close();
+        }
+        public List<ResultadoSerieMaclaurin> leerSerieMaclaurin()
+        {
+            StreamReader sr = new StreamReader(_ruta + "SerieMaclaurin_Unidad1.txt", true);
+            var lineas = sr.ReadToEnd().Split('\n');
+            List<ResultadoSerieMaclaurin> resultados = new List<ResultadoSerieMaclaurin>();
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoSerieMaclaurin
+                    {
+                        exponente = double.Parse(datos[0]),
+                        valorVerdadero = double.Parse(datos[1]),
+                        valorAproximado = double.Parse(datos[2]),
+                        ErrorVerdadero = double.Parse(datos[3]),
+                        ErrorPorcental = double.Parse(datos[4]),
+                        ErrorRelativoPorcentual = double.Parse(datos[5]),
+                        ToleranciaPorcentual = double.Parse(datos[6]),
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
         ////////////////
         ////unidad 4////
         ////////////////
@@ -195,5 +232,6 @@ namespace MetodosNumericos.src.herramientas.objetos
             }
             return resultados;
         }
+
     }
 }

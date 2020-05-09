@@ -81,6 +81,7 @@
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoExactitudPrecision.datasource" />
+    <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoSerieMaclaurin.datasource" />
     <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados.datasource" />
     <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio.datasource" />
     <None Include="Properties\Settings.settings">
