@@ -7,11 +7,17 @@ c:\
 |
 |_______ Pruebas
             |__ Historial
+	          |_____ Unidad 1
+                  |         |_____ Serie de Maclaurin
+		  |         |_____ Serie de Maclaurin
+                  |
                   |_____ Unidad 4
                   |         |_____ Diferenciacion Numerica
                   |         |_____ Trapecio
+                  |
                   |_____ Unidad 5
                             |_____ Lagrange
+
 
 </pre>
 
