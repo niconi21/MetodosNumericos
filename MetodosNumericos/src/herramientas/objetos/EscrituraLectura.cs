@@ -43,6 +43,34 @@ namespace MetodosNumericos.src.herramientas.objetos
             sr.Close();
             return resultados;
         }
+        public void escribirExactitudPresisión(ResultadoExactitudPrecision resultados)
+        {
+            StreamWriter sw = new StreamWriter(_ruta + "PrecisiónExactitud_Unidad1.txt", true);
+            sw.WriteLine(resultados.limite+ "," + resultados.porcentaje+ "," + resultados.precision + "," + resultados.exactitud);
+            sw.Close();
+        }
+        public List<ResultadoExactitudPrecision> leerPrecisionExactitud()
+        {
+            StreamReader sr = new StreamReader(_ruta + "PrecisiónExactitud_Unidad1.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            List<ResultadoExactitudPrecision> resultados = new List<ResultadoExactitudPrecision>();
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoExactitudPrecision
+                    {
+                        limite = int.Parse(datos[0]),
+                        porcentaje = int.Parse(datos[1]),
+                        precision = int.Parse(datos[2]),
+                        exactitud = int.Parse(datos[3]),
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
         ////////////////
         ////unidad 4////
         ////////////////

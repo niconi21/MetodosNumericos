@@ -10,7 +10,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
 {
     class ModeloExactitudPrecision : Modelo
     {
-        private List<int> numeros = new List<int>();
+        private List<ResultadoExactitudPrecision> numeros = new List<ResultadoExactitudPrecision>();
         public ModeloExactitudPrecision(int limite)
         {
             base.ValorN = limite;
@@ -22,7 +22,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             for (int i = 0; i < 50; i++)
             {
                 int numero = (int)(new Random()).Next(0, base.ValorN);
-                this.numeros.Add(numero);
+                this.numeros.Add(new ResultadoExactitudPrecision { numero = numero });
                 Thread.Sleep(1);
             }
         }
@@ -32,7 +32,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             int suma = 0;
             for (int i = 0; i < this.numeros.Count; i++)
             {
-                suma += this.numeros[i];
+                suma += this.numeros[i].numero;
             }
             return ((suma / 50 )* 100) / base.ValorN;
         }
@@ -46,7 +46,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
                 int diferencia = 0;
                 for (int j = i; j < this.numeros.Count; j++)
                 {
-                    diferencia += Math.Abs(numeros[i] - numeros[j]);
+                    diferencia += Math.Abs(numeros[i].numero - numeros[j].numero);
                    iteraciones++;
                 }
                 suma += diferencia;
@@ -55,7 +55,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             return (suma / iteraciones) * 100 / base.ValorN;
         }
 
-        public List<int> getNumeros() { return numeros; }
+        public List<ResultadoExactitudPrecision> getNumeros() { return numeros; }
 
         public override float[] resultados()
         {

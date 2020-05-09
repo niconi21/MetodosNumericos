@@ -92,11 +92,26 @@ namespace MetodosNumericos.src.vistas
             grafica.Series[0].ChartType = SeriesChartType.Point;
             foreach (var punto in puntos)
             {
-                grafica.Series[0].Points.AddY(punto);
-
+                grafica.Series[0].Points.AddY(punto.numero);
             }
+            grafica.SaveImage(@"C:\Pruebas\Historial\Unidad 5\Lagrange\" + limite, ChartImageFormat.Png);
+            ResultadoExactitudPrecision resultado = new ResultadoExactitudPrecision
+            {
+                limite = limite,
+                porcentaje = porcentaje,
+                exactitud = (int)resultados[0],
+                precision = (int)resultados[1]
+            };
+            (new EscrituraLectura()).escribirExactitudPresisión(resultado);
         }
-
+        private void tabHistorialPrecisionExactitud_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HistorialPrecisionExactitud.DataSource = (new EscrituraLectura()).leerPrecisionExactitud();
+            }
+            catch { }
+        }
         //////////////
         ///Unidad 2///
         //////////////
@@ -239,5 +254,7 @@ namespace MetodosNumericos.src.vistas
             catch { }
             
         }
+
+        
     }
 }

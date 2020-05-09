@@ -12,6 +12,6 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
         public int porcentaje { get; set; }
         public int exactitud { get; set; }
         public int precision { get; set; }
-            
+        public int numero { get; set; }    
     }
 }

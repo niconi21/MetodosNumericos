@@ -52,7 +52,10 @@
     <Compile Include="src\herramientas\objetos\Modelo.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 1\ModeloCifrasSignificativas.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 1\ModeloExactitudPrecision.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 1\ModeloSerieMaclaurin.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 1\ResultadoCifraSignificativas.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 1\ResultadoExactitudPrecision.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 1\ResultadoSerieMaclaurin.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloDiferenciacionNumerica.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloTrapecio.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\Resultados.cs" />
@@ -77,6 +80,7 @@
     <EmbeddedResource Include="src\vistas\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_1.ResultadoExactitudPrecision.datasource" />
     <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_4.Resultados.datasource" />
     <None Include="Properties\DataSources\MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio.datasource" />
     <None Include="Properties\Settings.settings">
@@ -92,7 +96,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\herramientas\objetos\Unidad 2\" />
+    <Folder Include="src\herramientas\objetos\Unidad 3\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
