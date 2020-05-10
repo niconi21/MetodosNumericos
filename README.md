@@ -9,6 +9,10 @@ c:\
             |__ Historial
 	          |_____ Unidad 1
                   |         |_____ Serie de Maclaurin
+		  |      
+	          |_____ Unidad 2
+                  |         |_____ Biseccion
+		  |         |_____ Newton-Rapshon
                   |
                   |_____ Unidad 4
                   |         |_____ Diferenciacion Numerica
