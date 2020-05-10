@@ -13,7 +13,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
         {
             base.Funcion = new Funcion(cifra);
         }
-        private float[] calcularCifrasSignificativas(String cifras)
+        private double[] calcularCifrasSignificativas(String cifras)
         {
             String cifrasSinCerosIzquierda = "";
             bool cerosIzquierda = true;
@@ -45,8 +45,8 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
                         puntoDecimal = true;
                 }
             }
-            float punto = puntoDecimal ? 1 : 0;
-            return new float[] { cifrasSinCerosIzquierda.Length - punto, cifrasSinCerosDerecha.Length - punto };
+            double punto = puntoDecimal ? 1 : 0;
+            return new double[] { cifrasSinCerosIzquierda.Length - punto, cifrasSinCerosDerecha.Length - punto };
         }
         public String notacionCientifica()
         {
@@ -101,11 +101,11 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             }
             return notacionCientifica;
         }
-        public override float[] resultados()
+        public override double[] resultados()
         {
             return calcularCifrasSignificativas(base.Funcion.funcion);
         }
-        public override List<float> puntos()
+        public override List<double> puntos()
         {
             return null;
         }

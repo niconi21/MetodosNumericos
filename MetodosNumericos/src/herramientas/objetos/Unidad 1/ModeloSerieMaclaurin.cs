@@ -11,7 +11,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
     {
         public ResultadoSerieMaclaurin Resultado{ get; set; }
         public List<ResultadoSerieMaclaurin> Resultados { get; set; }
-        public ModeloSerieMaclaurin(float exponente, int cifrasSignificativas)
+        public ModeloSerieMaclaurin(double exponente, int cifrasSignificativas)
         {
             Resultado = new ResultadoSerieMaclaurin();
             Resultados = new List<ResultadoSerieMaclaurin>();
@@ -75,16 +75,16 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             return this.Resultados;
         }
 
-        public override float[] resultados()
+        public override double[] resultados()
         {
             return null;
         }
-        public override List<float> puntos()
+        public override List<double> puntos()
         {
-            List<float> puntos = new List<float>();
+            List<double> puntos = new List<double>();
             foreach (var iteracion in Resultados)
             {
-                puntos.Add((float)iteracion.valorAproximado);
+                puntos.Add((double)iteracion.valorAproximado);
             }
             return puntos;
         }

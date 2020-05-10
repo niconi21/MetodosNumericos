@@ -12,13 +12,11 @@ namespace MetodosNumericos.src.herramientas.objetos
     {
         public String funcion { get; set; }
         private List<String> Terminos { get; set; }
-        private List<float> constantes { get; set; }
-
+        private List<double> constantes { get; set; }
         public Funcion(String funcion)
         {
             this.funcion = funcion;
         }
-
         private void separarFuncionEnTerminos()
         {
             this.Terminos = new List<string>();//instacio la lista de los terminos
@@ -38,9 +36,9 @@ namespace MetodosNumericos.src.herramientas.objetos
             this.Terminos.Add(termino);//al ultimo termino lo agregamos despues del bucle
             this.Terminos.RemoveAt(0);//borramos el primer elemento ya que siempre estará vacio
         }
-        private void convertirTerminosANumeros(float x)
+        private void convertirTerminosANumeros(double x)
         {
-            this.constantes = new List<float>();//instanciamos nuestra lista de las constantes
+            this.constantes = new List<double>();//instanciamos nuestra lista de las constantes
             foreach (var termino in this.Terminos)//recorremos los terminos y lo almacenamos en un termino
             {
                 var auxTermino = termino.Split('x');//separamos el termino con respecto a la x, lo que nos dará varios casos
@@ -49,11 +47,11 @@ namespace MetodosNumericos.src.herramientas.objetos
                     case 1://si la longitud del arreglo auxTermino es 1, quiere decir que solo es una constante
                         if (auxTermino[0].Equals("+e") || auxTermino[0].Equals("-e"))
                         {
-                            constantes.Add((float)Math.E);
+                            constantes.Add((double)Math.E);
                         }
                         else
                         {
-                            constantes.Add(float.Parse(auxTermino[0]));//lo convertimos a numero y lo almacenamos
+                            constantes.Add(double.Parse(auxTermino[0]));//lo convertimos a numero y lo almacenamos
                         }
                         break;
                     case 2://si la longitud es 2, entonces tenemos 4 casos
@@ -66,7 +64,7 @@ namespace MetodosNumericos.src.herramientas.objetos
                         {
                             try
                             {
-                                constantes.Add(float.Parse(auxTermino[0]) * x);//se convierte la constante a numero y se multiplica por x, al final se almacena
+                                constantes.Add(double.Parse(auxTermino[0]) * x);//se convierte la constante a numero y se multiplica por x, al final se almacena
                                 continue;
                             }
                             catch
@@ -79,21 +77,21 @@ namespace MetodosNumericos.src.herramientas.objetos
                                 var auxEuler = auxTermino[0].Split('e');
                                 if (!auxEuler[0].Equals("") && auxEuler[1].Equals("^"))
                                 {
-                                    float eulerElevadoX = (float)Math.Pow(Math.E, x);
-                                    float producto = float.Parse(auxEuler[0]) * eulerElevadoX;
+                                    double eulerElevadoX = (double)Math.Pow(Math.E, x);
+                                    double producto = double.Parse(auxEuler[0]) * eulerElevadoX;
                                     constantes.Add(negativo ? producto * -1 : producto);
                                     continue;
                                 }else if (auxEuler[0].Equals("") && auxEuler[1].Equals("^"))
                                 {
-                                    float eulerElevadoX = (float)Math.Pow(Math.E, x);
+                                    double eulerElevadoX = (double)Math.Pow(Math.E, x);
                                     constantes.Add(negativo ? eulerElevadoX * -1 : eulerElevadoX);
                                     continue;
                                 }
                                 else
                                 {
                                     var auxExponente = auxEuler[1].Split('^');
-                                    float productoVariableConstante = float.Parse(auxExponente[1]) * x;
-                                    float eulerElevadoAlProducto = (float)Math.Pow(Math.E, productoVariableConstante);
+                                    double productoVariableConstante = double.Parse(auxExponente[1]) * x;
+                                    double eulerElevadoAlProducto = (double)Math.Pow(Math.E, productoVariableConstante);
                                     constantes.Add(eulerElevadoAlProducto);
                                     continue;
                                 }
@@ -105,7 +103,7 @@ namespace MetodosNumericos.src.herramientas.objetos
                         {
                             
                             String exponente = auxTermino[1].Substring(1);//se obtiene el valor de la potencia o exponente
-                            constantes.Add((float)Math.Pow(x, float.Parse(exponente)));//a la variable la elevamos a la potencia o exponente
+                            constantes.Add((double)Math.Pow(x, double.Parse(exponente)));//a la variable la elevamos a la potencia o exponente
                             continue;
                         }
                         if (!auxTermino[0].Equals("") && !auxTermino[1].Equals(""))//cuarto caso donde se puede encontrar el termino con la forma "2x^2" es decir, una constante por la variable elevada a una potencia
@@ -113,8 +111,8 @@ namespace MetodosNumericos.src.herramientas.objetos
                             try
                             {
                                 String exponente = auxTermino[1].Substring(1);//se consigue el exponente a la que está elevado
-                                float elevadoExponente = (float)Math.Pow(x, float.Parse(exponente));//la variable se eleva a ese exponente
-                                float producto = float.Parse(auxTermino[0]) * elevadoExponente;//se multiplica la constante por el resultado de la variable elevado al exponente 
+                                double elevadoExponente = (double)Math.Pow(x, double.Parse(exponente));//la variable se eleva a ese exponente
+                                double producto = double.Parse(auxTermino[0]) * elevadoExponente;//se multiplica la constante por el resultado de la variable elevado al exponente 
                                 constantes.Add(producto);//se almacena el resultado
                                 continue;
                             }
@@ -128,15 +126,15 @@ namespace MetodosNumericos.src.herramientas.objetos
                                 var auxEuler = auxTermino[0].Split('e');
                                 if (!auxEuler[0].Equals("") && auxEuler[1].Equals("^"))
                                 {
-                                    float variableElevadaConstante = (float)Math.Pow(x, float.Parse(auxTermino[1].Substring(1)));
-                                    float eulerElevadoX = (float)Math.Pow(Math.E, variableElevadaConstante);
-                                    float producto = float.Parse(auxEuler[0]) * eulerElevadoX;
+                                    double variableElevadaConstante = (double)Math.Pow(x, double.Parse(auxTermino[1].Substring(1)));
+                                    double eulerElevadoX = (double)Math.Pow(Math.E, variableElevadaConstante);
+                                    double producto = double.Parse(auxEuler[0]) * eulerElevadoX;
                                     constantes.Add(negativo ? producto * -1 : producto);
                                     continue;
                                 }else if (auxEuler[0].Equals("") && auxEuler[1].Equals("^"))
                                 {
-                                    float variableElevadaConstante = (float)Math.Pow(x, float.Parse(auxTermino[1].Substring(1)));
-                                    float eulerElevadoX = (float)Math.Pow(Math.E, variableElevadaConstante);
+                                    double variableElevadaConstante = (double)Math.Pow(x, double.Parse(auxTermino[1].Substring(1)));
+                                    double eulerElevadoX = (double)Math.Pow(Math.E, variableElevadaConstante);
                                     constantes.Add(negativo ? eulerElevadoX * -1 : eulerElevadoX);
                                     continue;
                                 }
@@ -147,22 +145,21 @@ namespace MetodosNumericos.src.herramientas.objetos
                 }
             }//se repite hasta que se terminen todos los terminos
         }
-        public float evaluar(float x)
+        public double evaluar(double x)
         {
             separarFuncionEnTerminos();
             convertirTerminosANumeros(x);
-            float resultado = 0;
+            double resultado = 0;
             foreach (var constante in constantes)
             {
                 resultado += constante;
             }
             return resultado;
         }
-
-        public List<float> evaluar()
+        public List<double> evaluar()
         {
-            List<float> puntos = new List<float>();
-            for (float i = -3; i < 3; i+=.2f)
+            List<double> puntos = new List<double>();
+            for (double i = -3; i < 3; i+=.2f)
             {
                 puntos.Add(evaluar(i));
             }

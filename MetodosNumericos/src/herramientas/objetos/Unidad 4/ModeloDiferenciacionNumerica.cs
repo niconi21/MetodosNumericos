@@ -8,9 +8,9 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad4
 {
     public class ModeloDiferenciacionNumerica : Modelo
     {
-        public float valorH { get; set; }
+        public double valorH { get; set; }
 
-        public ModeloDiferenciacionNumerica(String funcion,float x, float h)
+        public ModeloDiferenciacionNumerica(String funcion,double x, double h)
         {
             base.Funcion = new Funcion(funcion);
             base.ValorXinicial = x;
@@ -22,64 +22,64 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad4
         ///////dos puntos//////
         ////////////////////////
         //Diferenciales finitas progresivas
-        private float solucionDosPuntosFinitasPrograsivas()
+        private double solucionDosPuntosFinitasPrograsivas()
         {
-            float sustitucionValorIniciaMasH = base.Funcion.evaluar(base.ValorXinicial + this.valorH);
-            float sustitucionValorInicial = base.Funcion.evaluar(base.ValorXinicial);
-            float resultado = (sustitucionValorIniciaMasH - sustitucionValorInicial) / this.valorH;
+            double sustitucionValorIniciaMasH = base.Funcion.evaluar(base.ValorXinicial + this.valorH);
+            double sustitucionValorInicial = base.Funcion.evaluar(base.ValorXinicial);
+            double resultado = (sustitucionValorIniciaMasH - sustitucionValorInicial) / this.valorH;
             return resultado;
         }
         //Diferenciales finitas centradas
-        private float solucionDosPuntosFinitasCentradas()
+        private double solucionDosPuntosFinitasCentradas()
         {
-            float sustitucionValorIniciaMasH = base.Funcion.evaluar(base.ValorXinicial + this.valorH);
-            float sustitucionValorInicialMenosH = base.Funcion.evaluar(base.ValorXinicial - this.valorH);
-            float resultado = (sustitucionValorIniciaMasH - sustitucionValorInicialMenosH) / (2 * this.valorH)  ;
+            double sustitucionValorIniciaMasH = base.Funcion.evaluar(base.ValorXinicial + this.valorH);
+            double sustitucionValorInicialMenosH = base.Funcion.evaluar(base.ValorXinicial - this.valorH);
+            double resultado = (sustitucionValorIniciaMasH - sustitucionValorInicialMenosH) / (2 * this.valorH)  ;
             return resultado;
         }
         //Diferenciales finitas regresivas
-        private float solucionDosPuntosFinitasRegresivas()
+        private double solucionDosPuntosFinitasRegresivas()
         {
-            float sustitucionValorInicial = base.Funcion.evaluar(base.ValorXinicial);
-            float sustitucionValorInicialMenosH = base.Funcion.evaluar(base.ValorXinicial - this.valorH);
-            float resultado = (sustitucionValorInicial - sustitucionValorInicialMenosH) / this.valorH;
+            double sustitucionValorInicial = base.Funcion.evaluar(base.ValorXinicial);
+            double sustitucionValorInicialMenosH = base.Funcion.evaluar(base.ValorXinicial - this.valorH);
+            double resultado = (sustitucionValorInicial - sustitucionValorInicialMenosH) / this.valorH;
             return resultado;
         }
         ////////////////////////
         ///////tres puntos//////
         ////////////////////////
         //Diferenciales finitas progresivas
-        private float solucionTresPuntosFinitasPrograsivas()
+        private double solucionTresPuntosFinitasPrograsivas()
         {
-            float menosTripleSustitucionValorInicial = -3 * base.Funcion.evaluar(base.ValorXinicial);
-            float cuatrupleSustitucionValorIniciaMasH = 4 * base.Funcion.evaluar(base.ValorXinicial + this.valorH);
-            float sustitucionValorIniciaMasDosH = base.Funcion.evaluar(base.ValorXinicial + (2 * this.valorH));
-            float resultado = (menosTripleSustitucionValorInicial + cuatrupleSustitucionValorIniciaMasH - sustitucionValorIniciaMasDosH) / (2.0f * this.valorH);
+            double menosTripleSustitucionValorInicial = -3 * base.Funcion.evaluar(base.ValorXinicial);
+            double cuatrupleSustitucionValorIniciaMasH = 4 * base.Funcion.evaluar(base.ValorXinicial + this.valorH);
+            double sustitucionValorIniciaMasDosH = base.Funcion.evaluar(base.ValorXinicial + (2 * this.valorH));
+            double resultado = (menosTripleSustitucionValorInicial + cuatrupleSustitucionValorIniciaMasH - sustitucionValorIniciaMasDosH) / (2.0f * this.valorH);
             return resultado;
         }
         //Diferenciales finitas Centradas
-        private float solucionTresPuntosFinitasCentradas()
+        private double solucionTresPuntosFinitasCentradas()
         {
-            float sustitucionValorInicialMenosDosH = base.Funcion.evaluar(base.ValorXinicial - (2 * this.valorH));
-            float octupleSustitucionValorInicialMenosH = 8 * base.Funcion.evaluar(base.ValorXinicial - this.valorH);
-            float octupleSustitucionValorInicialMasH = 8 * base.Funcion.evaluar(base.ValorXinicial + this.valorH);
-            float sustitucionValorInicialMasDosH = base.Funcion.evaluar(base.ValorXinicial + (2 * this.valorH));
-            float resultado = (sustitucionValorInicialMenosDosH - octupleSustitucionValorInicialMenosH + octupleSustitucionValorInicialMasH - sustitucionValorInicialMasDosH) / (12 * this.valorH);
+            double sustitucionValorInicialMenosDosH = base.Funcion.evaluar(base.ValorXinicial - (2 * this.valorH));
+            double octupleSustitucionValorInicialMenosH = 8 * base.Funcion.evaluar(base.ValorXinicial - this.valorH);
+            double octupleSustitucionValorInicialMasH = 8 * base.Funcion.evaluar(base.ValorXinicial + this.valorH);
+            double sustitucionValorInicialMasDosH = base.Funcion.evaluar(base.ValorXinicial + (2 * this.valorH));
+            double resultado = (sustitucionValorInicialMenosDosH - octupleSustitucionValorInicialMenosH + octupleSustitucionValorInicialMasH - sustitucionValorInicialMasDosH) / (12 * this.valorH);
             return resultado;
         }
         //Diferenciales finitas Regresiva
-        private float solucionTresPuntosFinitasRegresivas()
+        private double solucionTresPuntosFinitasRegresivas()
         {
-            float sustitucionValorInicialMenosDosH = base.Funcion.evaluar(base.ValorXinicial - (2 * this.valorH));
-            float cuadrupleSustitucionValorInicialMenosH = 4 *base.Funcion.evaluar(base.ValorXinicial - this.valorH);
-            float tripleSustitucionValorInicial = 3 * base.Funcion.evaluar(base.ValorXinicial);
-            float resultado = (sustitucionValorInicialMenosDosH - cuadrupleSustitucionValorInicialMenosH + tripleSustitucionValorInicial) / (2 * this.valorH);
+            double sustitucionValorInicialMenosDosH = base.Funcion.evaluar(base.ValorXinicial - (2 * this.valorH));
+            double cuadrupleSustitucionValorInicialMenosH = 4 *base.Funcion.evaluar(base.ValorXinicial - this.valorH);
+            double tripleSustitucionValorInicial = 3 * base.Funcion.evaluar(base.ValorXinicial);
+            double resultado = (sustitucionValorInicialMenosDosH - cuadrupleSustitucionValorInicialMenosH + tripleSustitucionValorInicial) / (2 * this.valorH);
             return resultado;
         }
 
-        public override float[] resultados()
+        public override double[] resultados()
         {
-            float[] resultados = new float[] { 
+            double[] resultados = new double[] { 
                 solucionDosPuntosFinitasPrograsivas(),
                 solucionTresPuntosFinitasPrograsivas(),
                 solucionDosPuntosFinitasCentradas(),
@@ -90,7 +90,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad4
             return resultados;   
         }
 
-        public override List<float> puntos()
+        public override List<double> puntos()
         {
             return base.Funcion.evaluar();
         }

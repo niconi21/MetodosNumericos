@@ -13,6 +13,7 @@ using MetodosNumericos.src.herramientas.objetos.Unidad_4;
 using System.Windows.Forms.DataVisualization.Charting;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
 using MetodosNumericos.src.herramientas.objetos.Unidad_1;
+using MetodosNumericos.src.herramientas.objetos.Unidad_2;
 
 namespace MetodosNumericos.src.vistas
 {
@@ -24,9 +25,12 @@ namespace MetodosNumericos.src.vistas
         public Inicio()
         {
             InitializeComponent();
-            labelInstruccionesUnidad1.Text = "Daremos una breve introducción a los metodos numéricos con una simple explicación de "+
-                "\nun programa que nos ayude a calcular las cifras significativas que tiene una cierta cantidad, tambien vamos a calcular la precisión "+
+            labelInstruccionesUnidad1.Text = "Daremos una breve introducción a los metodos numéricos con una simple explicación de " +
+                "\nun programa que nos ayude a calcular las cifras significativas que tiene una cierta cantidad, tambien vamos a calcular la precisión " +
                 "\ny la exactitud de un conjunto de datos generados aleatoriamente, además de calcular el valor de euler con series de Maclautrin";
+            labelInstruccionesUnidad2.Text = "Los metodos para solución de ecuaciones nos ayudan a encontrar los valores de ciertas" +
+                "\nfunciones mediante un metodo fuera de los tradcionales, de esta manera podemos explorar muchas formas de aprender a solucionar" +
+                "\n los problemas que nos podemos encontrar.";
             labelInstruccionesUnidad4.Text = "Calcularemos laa integral y la derivada e funciones, es por ello que tenemos dos secciones." +
                 "\nEn la primera \"Diferenciación\" podrás encontrar tres cajas de texto, donde introducirás tu función y el valor correspondiente a h y a x0\npara poder calcular la derivada.\n " +
                 "\nEn la segunda \"Trapecio simple y compuesto\" podrémos encontrar tres cajas de texto donde se introducirán la funcion y los intervalos\n de esta para poder calcular la integral";
@@ -114,7 +118,7 @@ namespace MetodosNumericos.src.vistas
         }
         private void btnCalcularSerieMaclaurin_Click(object sender, EventArgs e)
         {
-            float exponente = float.Parse(txtExponenteSerieMaclaurin.Text);
+            double exponente = double.Parse(txtExponenteSerieMaclaurin.Text);
             int cifrasSignificativas = int.Parse(txtCifrasSignificativasSerieMaclaurin.Text);
             _modelo = new ModeloSerieMaclaurin(exponente,cifrasSignificativas);
             var resultados = ((ModeloSerieMaclaurin)_modelo).resultado();
@@ -141,6 +145,67 @@ namespace MetodosNumericos.src.vistas
         //////////////
         ///Unidad 2///
         //////////////
+        private void btnCalcularBiseccion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String funcion = txtFuncionBiseccion.Text;
+                double intervaloA = double.Parse(txtIntervaloABiseccion.Text);
+                double intervaloB = double.Parse(txtIntervaloBBiseccion.Text);
+                int cifrasSignificativas = int.Parse(txtCifrasBiseccion.Text);
+                _modelo = new ModeloBiseccion(funcion, intervaloA, intervaloB, cifrasSignificativas);
+                lblResultadoBiseccion.Text = "Resultado de: " + funcion;
+                var resultados = ((ModeloBiseccion)_modelo).resultado();
+                tablaBiseccion.DataSource = resultados;
+                grafica.Series[0].ChartType = SeriesChartType.Spline;
+                grafica.Series[0].Points.Clear();
+                var puntos = ((ModeloBiseccion)_modelo).resultados();
+                foreach (var punto in puntos)
+                {
+                    grafica.Series[0].Points.AddY(punto);
+                }
+                grafica.SaveImage(@"C:\\Pruebas\Historial\Unidad 2\Biseccion\" + funcion + "-intervalo(" + intervaloA + "," + intervaloB + ").png", ChartImageFormat.Png);
+                _escribirLeer.escribirBiseccion(resultados.ElementAt(resultados.Count - 1));
+            }catch{
+                MessageBox.Show("No se puede calcular");
+            }
+        }
+        private void tabHistorialBiseccion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<ResultadoModeloBireccion> resultados = _escribirLeer.leerBiseccion();
+                HistorialBiseccion.DataSource = resultados;
+            }
+            catch { }
+        }
+        private void btnCalcularNewtonRapshon_Click(object sender, EventArgs e)
+        {
+            String funcion = txtFuncionNewtonRapshon.Text;
+            double valorInicial = double.Parse(txtValorInicialNewtonRapshon.Text);
+            int cifrasSignificativas = int.Parse(txtCifrasSignificativasNewtonRapshon.Text);
+            _modelo = new ModeloNewtonRapshon(funcion, valorInicial, cifrasSignificativas);
+            var resultados = ((ModeloNewtonRapshon)_modelo).resultado();
+            tablaNewtonRapshon.DataSource = resultados;
+            grafica.Series[0].ChartType = SeriesChartType.Spline;
+            grafica.Series[0].Points.Clear();
+            var puntos = ((ModeloNewtonRapshon)_modelo).puntos();
+            foreach (var punto in puntos)
+            {
+                grafica.Series[0].Points.AddY(punto);
+            }
+            grafica.SaveImage(@"C:\\Pruebas\Historial\Unidad 2\Newton-Rapshon\" + funcion + "-Valor Inicial" + valorInicial + ".png", ChartImageFormat.Png);
+            _escribirLeer.escribirNewtonRapshon(resultados.ElementAt(resultados.Count - 1));
+        }
+        private void tabHistorialNewtonRapshon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                historialNewtonRapshon.DataSource = _escribirLeer.leerNewtonRapshon();
+            }
+            catch { }
+        }
+
         //////////////
         ///Unidad 3///
         //////////////
@@ -150,8 +215,8 @@ namespace MetodosNumericos.src.vistas
         private void btnDiferenciacionUnidad4_Click(object sender, EventArgs e)
         {
             String funcion = txtFuncionUnidad4.Text;
-            float valorH = float.Parse(txtValorHDiferenciacionUnidad4.Text);
-            float valorX0 = float.Parse(txtValorX0DiferenciacionUnidad4.Text);
+            double valorH = double.Parse(txtValorHDiferenciacionUnidad4.Text);
+            double valorX0 = double.Parse(txtValorX0DiferenciacionUnidad4.Text);
             this._modelo = new ModeloDiferenciacionNumerica(funcion, valorX0, valorH);
             var resultados = this._modelo.resultados();
             lblResultadoFuncionDiferenciacionUnidad4.Text = "Función: " + funcion;
@@ -198,8 +263,8 @@ namespace MetodosNumericos.src.vistas
         private void btnTrapecioUnidad4_Click(object sender, EventArgs e)
         {
             String funcion = txtFuncionUnidad4.Text;
-            float intervaloA = float.Parse(txtIntervaloAUnidad4.Text);
-            float intervaloB = float.Parse(txtIntervaloBUnidad4.Text);
+            double intervaloA = double.Parse(txtIntervaloAUnidad4.Text);
+            double intervaloB = double.Parse(txtIntervaloBUnidad4.Text);
             int valorN = int.Parse(txtValorNTrapecio.Text);
             this._modelo = new ModeloTrapecio(funcion, intervaloA, intervaloB, valorN);
             var resultados = this._modelo.resultados();
@@ -242,15 +307,15 @@ namespace MetodosNumericos.src.vistas
 
             var valoresX = textoValoresX.Split(',');
             var valoresY = textoValoresY.Split(',');
-            float[] arrelgoX = new float[valoresX.Length];
+            double[] arrelgoX = new double[valoresX.Length];
             for (int i = 0; i < valoresX.Length; i++)
             {
-                arrelgoX[i] = float.Parse(valoresX[i]);
+                arrelgoX[i] = double.Parse(valoresX[i]);
             }
-            float[] arrelgoY = new float[valoresY.Length];
+            double[] arrelgoY = new double[valoresY.Length];
             for (int i = 0; i < valoresY.Length; i++)
             {
-                arrelgoY[i] = float.Parse(valoresY[i]);
+                arrelgoY[i] = double.Parse(valoresY[i]);
             }
 
             _modelo = new ModeloLagrange(arrelgoX, arrelgoY);
@@ -281,6 +346,12 @@ namespace MetodosNumericos.src.vistas
             catch { }
             
         }
+
+        
+
+
+
+   
 
 
 

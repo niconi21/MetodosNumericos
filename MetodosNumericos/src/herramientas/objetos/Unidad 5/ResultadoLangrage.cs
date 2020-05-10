@@ -9,7 +9,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
     public class ResultadoLangrage
     {
         public String Funcion { get; set; }
-        public float[] puntosX { get; set; }
-        public float[] puntosY { get; set; }
+        public double[] puntosX { get; set; }
+        public double[] puntosY { get; set; }
     }
 }

@@ -9,22 +9,22 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
 {
     public class ModeloLagrange : Modelo
     {
-        private float[] coordenadasX { get; set; }
-        private float[] coordenadasY { get; set; }
-        private List<float> coeficientes { get; set; }
+        private double[] coordenadasX { get; set; }
+        private double[] coordenadasY { get; set; }
+        private List<double> coeficientes { get; set; }
         private List<String> polinomios { get; set; }
-        public ModeloLagrange(float[] coordenadasX, float[] coordenadasY)
+        public ModeloLagrange(double[] coordenadasX, double[] coordenadasY)
         {
             this.coordenadasX = coordenadasX;
             this.coordenadasY = coordenadasY;
-            this.coeficientes = new List<float>();
+            this.coeficientes = new List<double>();
             this.polinomios = new List<string>();
         }
         private void getCoeficientes(){
             for (int i = 0; i < this.coordenadasX.Length; i++)
             {
-                float valorPocision = this.coordenadasX[i];
-                float productoDenominador = 1;
+                double valorPocision = this.coordenadasX[i];
+                double productoDenominador = 1;
                 for (int j = 0; j < this.coordenadasX.Length; j++)
                 {
                     if (j != i)
@@ -32,7 +32,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
                         productoDenominador *= valorPocision - this.coordenadasX[j];
                     }
                 }
-                float coeficiente = this.coordenadasY[i] / productoDenominador;
+                double coeficiente = this.coordenadasY[i] / productoDenominador;
                 coeficientes.Add(coeficiente);
             }
         }
@@ -41,7 +41,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
 
             for (int i = 0; i < this.coordenadasX.Length; i++)
             {
-                float puntoX = this.coordenadasX[i];
+                double puntoX = this.coordenadasX[i];
                 String polinomio = "";
                 for (int j = 0; j < this.coordenadasX.Length; j++)
                 {
@@ -91,17 +91,17 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
             return funcion;
 
         }
-        public override List<float> puntos()
+        public override List<double> puntos()
         {
-            List<float> puntos = new List<float>();
+            List<double> puntos = new List<double>();
             var monomios = resolverPolinomio();
             
-            for (float i = coordenadasX[0]; i < coordenadasX[coordenadasX.Length-1]; i++)
+            for (double i = coordenadasX[0]; i < coordenadasX[coordenadasX.Length-1]; i++)
             {
                 int j = 0;
                 foreach (var monomio in monomios)
                 {
-                    float producto = coeficientes[j++];
+                    double producto = coeficientes[j++];
                     var terminos = monomio.Split(' ');
                     foreach (var termino in terminos)
                     {
@@ -116,7 +116,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_5
             }
             return puntos;
         }
-        public override float[] resultados()
+        public override double[] resultados()
         {
             return null;
         }

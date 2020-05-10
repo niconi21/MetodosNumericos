@@ -27,7 +27,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             }
         }
 
-        private float calcularExactitud()
+        private double calcularExactitud()
         {
             int suma = 0;
             for (int i = 0; i < this.numeros.Count; i++)
@@ -37,7 +37,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
             return ((suma / 50 )* 100) / base.ValorN;
         }
 
-        private float calcularPrecision()
+        private double calcularPrecision()
         {
             int suma = 0;
             int iteraciones = 0;
@@ -57,11 +57,11 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_1
 
         public List<ResultadoExactitudPrecision> getNumeros() { return numeros; }
 
-        public override float[] resultados()
+        public override double[] resultados()
         {
-            return new float[] { calcularExactitud(), calcularPrecision() };
+            return new double[] { calcularExactitud(), calcularPrecision() };
         }
-        public override List<float> puntos()
+        public override List<double> puntos()
         {
             return null;
         }

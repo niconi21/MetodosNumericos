@@ -73,9 +73,43 @@
             this.labelResultadosSerieMaclaurin = new System.Windows.Forms.Label();
             this.tabPage22 = new System.Windows.Forms.TabPage();
             this.historialSerieMaclaurin = new System.Windows.Forms.DataGridView();
+            this.exponente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelInstruccionesUnidad1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtCifrasBiseccion = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtIntervaloBBiseccion = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtIntervaloABiseccion = new System.Windows.Forms.TextBox();
+            this.tabHistorialBiseccion = new System.Windows.Forms.TabControl();
+            this.tabPage24 = new System.Windows.Forms.TabPage();
+            this.tablaBiseccion = new System.Windows.Forms.DataGridView();
+            this.lblResultadoBiseccion = new System.Windows.Forms.Label();
+            this.tabPage25 = new System.Windows.Forms.TabPage();
+            this.HistorialBiseccion = new System.Windows.Forms.DataGridView();
+            this.btnCalcularBiseccion = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtFuncionBiseccion = new System.Windows.Forms.TextBox();
+            this.tabPage26 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtCifrasSignificativasNewtonRapshon = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtValorInicialNewtonRapshon = new System.Windows.Forms.TextBox();
+            this.btnCalcularNewtonRapshon = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtFuncionNewtonRapshon = new System.Windows.Forms.TextBox();
+            this.tabHistorialNewtonRapshon = new System.Windows.Forms.TabControl();
+            this.tabPage27 = new System.Windows.Forms.TabPage();
+            this.tablaNewtonRapshon = new System.Windows.Forms.DataGridView();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tabPage28 = new System.Windows.Forms.TabPage();
+            this.historialNewtonRapshon = new System.Windows.Forms.DataGridView();
+            this.labelInstruccionesUnidad2 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -131,7 +165,6 @@
             this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.exponente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoExactitudPrecisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.limiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,6 +183,17 @@
             this.errorPorcentalDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorRelativoPorcentualDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toleranciaPorcentualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intervaloADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.intervaloBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aproximacionRaizDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sustitucionIntervaloADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoModeloBireccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.valorXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoNewtonRapshonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,6 +206,12 @@
             this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.resultadoNewtonRapshonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.derivadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorXDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -182,6 +232,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaSerieMaclaurin)).BeginInit();
             this.tabPage22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialSerieMaclaurin)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabControl4.SuspendLayout();
+            this.tabPage23.SuspendLayout();
+            this.tabHistorialBiseccion.SuspendLayout();
+            this.tabPage24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaBiseccion)).BeginInit();
+            this.tabPage25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HistorialBiseccion)).BeginInit();
+            this.tabPage26.SuspendLayout();
+            this.tabHistorialNewtonRapshon.SuspendLayout();
+            this.tabPage27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaNewtonRapshon)).BeginInit();
+            this.tabPage28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historialNewtonRapshon)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -205,8 +269,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoModeloBireccionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -668,6 +735,12 @@
             this.historialSerieMaclaurin.Size = new System.Drawing.Size(622, 342);
             this.historialSerieMaclaurin.TabIndex = 0;
             // 
+            // exponente
+            // 
+            this.exponente.DataPropertyName = "exponente";
+            this.exponente.HeaderText = "Exponente";
+            this.exponente.Name = "exponente";
+            // 
             // labelInstruccionesUnidad1
             // 
             this.labelInstruccionesUnidad1.AutoSize = true;
@@ -691,6 +764,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tabControl4);
+            this.tabPage2.Controls.Add(this.labelInstruccionesUnidad2);
+            this.tabPage2.Controls.Add(this.label35);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -698,6 +774,364 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad 2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage23);
+            this.tabControl4.Controls.Add(this.tabPage26);
+            this.tabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl4.Location = new System.Drawing.Point(3, 41);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(644, 520);
+            this.tabControl4.TabIndex = 8;
+            // 
+            // tabPage23
+            // 
+            this.tabPage23.Controls.Add(this.label17);
+            this.tabPage23.Controls.Add(this.txtCifrasBiseccion);
+            this.tabPage23.Controls.Add(this.label32);
+            this.tabPage23.Controls.Add(this.txtIntervaloBBiseccion);
+            this.tabPage23.Controls.Add(this.label31);
+            this.tabPage23.Controls.Add(this.txtIntervaloABiseccion);
+            this.tabPage23.Controls.Add(this.tabHistorialBiseccion);
+            this.tabPage23.Controls.Add(this.btnCalcularBiseccion);
+            this.tabPage23.Controls.Add(this.label22);
+            this.tabPage23.Controls.Add(this.txtFuncionBiseccion);
+            this.tabPage23.Location = new System.Drawing.Point(4, 22);
+            this.tabPage23.Name = "tabPage23";
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage23.Size = new System.Drawing.Size(636, 494);
+            this.tabPage23.TabIndex = 0;
+            this.tabPage23.Text = "Método de bisección.\t";
+            this.tabPage23.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(371, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(154, 17);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Cifras significativas:";
+            // 
+            // txtCifrasBiseccion
+            // 
+            this.txtCifrasBiseccion.Location = new System.Drawing.Point(531, 58);
+            this.txtCifrasBiseccion.Name = "txtCifrasBiseccion";
+            this.txtCifrasBiseccion.Size = new System.Drawing.Size(63, 20);
+            this.txtCifrasBiseccion.TabIndex = 13;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(180, 58);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(94, 17);
+            this.label32.TabIndex = 12;
+            this.label32.Text = "Intervalo B:";
+            // 
+            // txtIntervaloBBiseccion
+            // 
+            this.txtIntervaloBBiseccion.Location = new System.Drawing.Point(278, 58);
+            this.txtIntervaloBBiseccion.Name = "txtIntervaloBBiseccion";
+            this.txtIntervaloBBiseccion.Size = new System.Drawing.Size(63, 20);
+            this.txtIntervaloBBiseccion.TabIndex = 11;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(8, 58);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(89, 17);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Intervalo A";
+            // 
+            // txtIntervaloABiseccion
+            // 
+            this.txtIntervaloABiseccion.Location = new System.Drawing.Point(103, 58);
+            this.txtIntervaloABiseccion.Name = "txtIntervaloABiseccion";
+            this.txtIntervaloABiseccion.Size = new System.Drawing.Size(71, 20);
+            this.txtIntervaloABiseccion.TabIndex = 9;
+            // 
+            // tabHistorialBiseccion
+            // 
+            this.tabHistorialBiseccion.Controls.Add(this.tabPage24);
+            this.tabHistorialBiseccion.Controls.Add(this.tabPage25);
+            this.tabHistorialBiseccion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabHistorialBiseccion.Location = new System.Drawing.Point(3, 117);
+            this.tabHistorialBiseccion.Name = "tabHistorialBiseccion";
+            this.tabHistorialBiseccion.SelectedIndex = 0;
+            this.tabHistorialBiseccion.Size = new System.Drawing.Size(630, 374);
+            this.tabHistorialBiseccion.TabIndex = 8;
+            this.tabHistorialBiseccion.Click += new System.EventHandler(this.tabHistorialBiseccion_Click);
+            // 
+            // tabPage24
+            // 
+            this.tabPage24.Controls.Add(this.tablaBiseccion);
+            this.tabPage24.Controls.Add(this.lblResultadoBiseccion);
+            this.tabPage24.Location = new System.Drawing.Point(4, 22);
+            this.tabPage24.Name = "tabPage24";
+            this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage24.Size = new System.Drawing.Size(622, 348);
+            this.tabPage24.TabIndex = 0;
+            this.tabPage24.Text = "Resultado";
+            this.tabPage24.UseVisualStyleBackColor = true;
+            // 
+            // tablaBiseccion
+            // 
+            this.tablaBiseccion.AutoGenerateColumns = false;
+            this.tablaBiseccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaBiseccion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.intervaloADataGridViewTextBoxColumn,
+            this.intervaloBDataGridViewTextBoxColumn,
+            this.aproximacionRaizDataGridViewTextBoxColumn,
+            this.sustitucionIntervaloADataGridViewTextBoxColumn,
+            this.sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn,
+            this.productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn,
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn2});
+            this.tablaBiseccion.DataSource = this.resultadoModeloBireccionBindingSource;
+            this.tablaBiseccion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tablaBiseccion.Location = new System.Drawing.Point(3, 43);
+            this.tablaBiseccion.Name = "tablaBiseccion";
+            this.tablaBiseccion.Size = new System.Drawing.Size(616, 302);
+            this.tablaBiseccion.TabIndex = 20;
+            // 
+            // lblResultadoBiseccion
+            // 
+            this.lblResultadoBiseccion.AutoSize = true;
+            this.lblResultadoBiseccion.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoBiseccion.Location = new System.Drawing.Point(20, 21);
+            this.lblResultadoBiseccion.Name = "lblResultadoBiseccion";
+            this.lblResultadoBiseccion.Size = new System.Drawing.Size(125, 19);
+            this.lblResultadoBiseccion.TabIndex = 19;
+            this.lblResultadoBiseccion.Text = "Resultado de:";
+            // 
+            // tabPage25
+            // 
+            this.tabPage25.Controls.Add(this.HistorialBiseccion);
+            this.tabPage25.Location = new System.Drawing.Point(4, 22);
+            this.tabPage25.Name = "tabPage25";
+            this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage25.Size = new System.Drawing.Size(622, 348);
+            this.tabPage25.TabIndex = 1;
+            this.tabPage25.Text = "Historial";
+            this.tabPage25.UseVisualStyleBackColor = true;
+            // 
+            // HistorialBiseccion
+            // 
+            this.HistorialBiseccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HistorialBiseccion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HistorialBiseccion.Location = new System.Drawing.Point(3, 3);
+            this.HistorialBiseccion.Name = "HistorialBiseccion";
+            this.HistorialBiseccion.Size = new System.Drawing.Size(616, 342);
+            this.HistorialBiseccion.TabIndex = 0;
+            // 
+            // btnCalcularBiseccion
+            // 
+            this.btnCalcularBiseccion.Location = new System.Drawing.Point(388, 22);
+            this.btnCalcularBiseccion.Name = "btnCalcularBiseccion";
+            this.btnCalcularBiseccion.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularBiseccion.TabIndex = 7;
+            this.btnCalcularBiseccion.Text = "Calcular";
+            this.btnCalcularBiseccion.UseVisualStyleBackColor = true;
+            this.btnCalcularBiseccion.Click += new System.EventHandler(this.btnCalcularBiseccion_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(64, 19);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(70, 17);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Funcion:";
+            // 
+            // txtFuncionBiseccion
+            // 
+            this.txtFuncionBiseccion.Location = new System.Drawing.Point(141, 19);
+            this.txtFuncionBiseccion.Name = "txtFuncionBiseccion";
+            this.txtFuncionBiseccion.Size = new System.Drawing.Size(200, 20);
+            this.txtFuncionBiseccion.TabIndex = 0;
+            // 
+            // tabPage26
+            // 
+            this.tabPage26.Controls.Add(this.label18);
+            this.tabPage26.Controls.Add(this.txtCifrasSignificativasNewtonRapshon);
+            this.tabPage26.Controls.Add(this.label25);
+            this.tabPage26.Controls.Add(this.txtValorInicialNewtonRapshon);
+            this.tabPage26.Controls.Add(this.btnCalcularNewtonRapshon);
+            this.tabPage26.Controls.Add(this.label26);
+            this.tabPage26.Controls.Add(this.txtFuncionNewtonRapshon);
+            this.tabPage26.Controls.Add(this.tabHistorialNewtonRapshon);
+            this.tabPage26.Location = new System.Drawing.Point(4, 22);
+            this.tabPage26.Name = "tabPage26";
+            this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage26.Size = new System.Drawing.Size(636, 494);
+            this.tabPage26.TabIndex = 1;
+            this.tabPage26.Text = "Newton - rapshon";
+            this.tabPage26.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(269, 69);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(154, 17);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Cifras significativas:";
+            // 
+            // txtCifrasSignificativasNewtonRapshon
+            // 
+            this.txtCifrasSignificativasNewtonRapshon.Location = new System.Drawing.Point(429, 66);
+            this.txtCifrasSignificativasNewtonRapshon.Name = "txtCifrasSignificativasNewtonRapshon";
+            this.txtCifrasSignificativasNewtonRapshon.Size = new System.Drawing.Size(63, 20);
+            this.txtCifrasSignificativasNewtonRapshon.TabIndex = 22;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(53, 66);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(101, 17);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "Valor inicial";
+            // 
+            // txtValorInicialNewtonRapshon
+            // 
+            this.txtValorInicialNewtonRapshon.Location = new System.Drawing.Point(177, 66);
+            this.txtValorInicialNewtonRapshon.Name = "txtValorInicialNewtonRapshon";
+            this.txtValorInicialNewtonRapshon.Size = new System.Drawing.Size(71, 20);
+            this.txtValorInicialNewtonRapshon.TabIndex = 18;
+            // 
+            // btnCalcularNewtonRapshon
+            // 
+            this.btnCalcularNewtonRapshon.Location = new System.Drawing.Point(408, 30);
+            this.btnCalcularNewtonRapshon.Name = "btnCalcularNewtonRapshon";
+            this.btnCalcularNewtonRapshon.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularNewtonRapshon.TabIndex = 17;
+            this.btnCalcularNewtonRapshon.Text = "Calcular";
+            this.btnCalcularNewtonRapshon.UseVisualStyleBackColor = true;
+            this.btnCalcularNewtonRapshon.Click += new System.EventHandler(this.btnCalcularNewtonRapshon_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(84, 27);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(70, 17);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "Funcion:";
+            // 
+            // txtFuncionNewtonRapshon
+            // 
+            this.txtFuncionNewtonRapshon.Location = new System.Drawing.Point(161, 27);
+            this.txtFuncionNewtonRapshon.Name = "txtFuncionNewtonRapshon";
+            this.txtFuncionNewtonRapshon.Size = new System.Drawing.Size(200, 20);
+            this.txtFuncionNewtonRapshon.TabIndex = 15;
+            // 
+            // tabHistorialNewtonRapshon
+            // 
+            this.tabHistorialNewtonRapshon.Controls.Add(this.tabPage27);
+            this.tabHistorialNewtonRapshon.Controls.Add(this.tabPage28);
+            this.tabHistorialNewtonRapshon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabHistorialNewtonRapshon.Location = new System.Drawing.Point(3, 117);
+            this.tabHistorialNewtonRapshon.Name = "tabHistorialNewtonRapshon";
+            this.tabHistorialNewtonRapshon.SelectedIndex = 0;
+            this.tabHistorialNewtonRapshon.Size = new System.Drawing.Size(630, 374);
+            this.tabHistorialNewtonRapshon.TabIndex = 9;
+            this.tabHistorialNewtonRapshon.Click += new System.EventHandler(this.tabHistorialNewtonRapshon_Click);
+            // 
+            // tabPage27
+            // 
+            this.tabPage27.Controls.Add(this.tablaNewtonRapshon);
+            this.tabPage27.Controls.Add(this.label30);
+            this.tabPage27.Location = new System.Drawing.Point(4, 22);
+            this.tabPage27.Name = "tabPage27";
+            this.tabPage27.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage27.Size = new System.Drawing.Size(622, 348);
+            this.tabPage27.TabIndex = 0;
+            this.tabPage27.Text = "Resultado";
+            this.tabPage27.UseVisualStyleBackColor = true;
+            // 
+            // tablaNewtonRapshon
+            // 
+            this.tablaNewtonRapshon.AutoGenerateColumns = false;
+            this.tablaNewtonRapshon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaNewtonRapshon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.valorXDataGridViewTextBoxColumn,
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn3});
+            this.tablaNewtonRapshon.DataSource = this.resultadoNewtonRapshonBindingSource;
+            this.tablaNewtonRapshon.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tablaNewtonRapshon.Location = new System.Drawing.Point(3, 66);
+            this.tablaNewtonRapshon.Name = "tablaNewtonRapshon";
+            this.tablaNewtonRapshon.Size = new System.Drawing.Size(616, 279);
+            this.tablaNewtonRapshon.TabIndex = 22;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(20, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(219, 19);
+            this.label30.TabIndex = 19;
+            this.label30.Text = "Resultado de la funcion::";
+            // 
+            // tabPage28
+            // 
+            this.tabPage28.Controls.Add(this.historialNewtonRapshon);
+            this.tabPage28.Location = new System.Drawing.Point(4, 22);
+            this.tabPage28.Name = "tabPage28";
+            this.tabPage28.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage28.Size = new System.Drawing.Size(622, 348);
+            this.tabPage28.TabIndex = 1;
+            this.tabPage28.Text = "Historial";
+            this.tabPage28.UseVisualStyleBackColor = true;
+            // 
+            // historialNewtonRapshon
+            // 
+            this.historialNewtonRapshon.AutoGenerateColumns = false;
+            this.historialNewtonRapshon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.historialNewtonRapshon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.funcionDataGridViewTextBoxColumn2,
+            this.derivadaDataGridViewTextBoxColumn,
+            this.valorXDataGridViewTextBoxColumn1,
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4,
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1});
+            this.historialNewtonRapshon.DataSource = this.resultadoNewtonRapshonBindingSource1;
+            this.historialNewtonRapshon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historialNewtonRapshon.Location = new System.Drawing.Point(3, 3);
+            this.historialNewtonRapshon.Name = "historialNewtonRapshon";
+            this.historialNewtonRapshon.Size = new System.Drawing.Size(616, 342);
+            this.historialNewtonRapshon.TabIndex = 0;
+            // 
+            // labelInstruccionesUnidad2
+            // 
+            this.labelInstruccionesUnidad2.AutoSize = true;
+            this.labelInstruccionesUnidad2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelInstruccionesUnidad2.Location = new System.Drawing.Point(3, 28);
+            this.labelInstruccionesUnidad2.Name = "labelInstruccionesUnidad2";
+            this.labelInstruccionesUnidad2.Size = new System.Drawing.Size(35, 13);
+            this.labelInstruccionesUnidad2.TabIndex = 7;
+            this.labelInstruccionesUnidad2.Text = "label4";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label35.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(3, 3);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(496, 25);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Unidad 2: Métodos de solución de ecuaciones";
             // 
             // tabPage3
             // 
@@ -1295,12 +1729,6 @@
             this.grafica.TabIndex = 3;
             this.grafica.Text = "chart1";
             // 
-            // exponente
-            // 
-            this.exponente.DataPropertyName = "exponente";
-            this.exponente.HeaderText = "Exponente";
-            this.exponente.Name = "exponente";
-            // 
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
@@ -1403,6 +1831,68 @@
             this.toleranciaPorcentualDataGridViewTextBoxColumn.HeaderText = "Tolerancia Porcentual";
             this.toleranciaPorcentualDataGridViewTextBoxColumn.Name = "toleranciaPorcentualDataGridViewTextBoxColumn";
             // 
+            // intervaloADataGridViewTextBoxColumn
+            // 
+            this.intervaloADataGridViewTextBoxColumn.DataPropertyName = "IntervaloA";
+            this.intervaloADataGridViewTextBoxColumn.HeaderText = "Intervalo A";
+            this.intervaloADataGridViewTextBoxColumn.Name = "intervaloADataGridViewTextBoxColumn";
+            // 
+            // intervaloBDataGridViewTextBoxColumn
+            // 
+            this.intervaloBDataGridViewTextBoxColumn.DataPropertyName = "IntervaloB";
+            this.intervaloBDataGridViewTextBoxColumn.HeaderText = "Intervalo B";
+            this.intervaloBDataGridViewTextBoxColumn.Name = "intervaloBDataGridViewTextBoxColumn";
+            // 
+            // aproximacionRaizDataGridViewTextBoxColumn
+            // 
+            this.aproximacionRaizDataGridViewTextBoxColumn.DataPropertyName = "AproximacionRaiz";
+            this.aproximacionRaizDataGridViewTextBoxColumn.HeaderText = "Aproximacion de la Raiz";
+            this.aproximacionRaizDataGridViewTextBoxColumn.Name = "aproximacionRaizDataGridViewTextBoxColumn";
+            // 
+            // sustitucionIntervaloADataGridViewTextBoxColumn
+            // 
+            this.sustitucionIntervaloADataGridViewTextBoxColumn.DataPropertyName = "SustitucionIntervaloA";
+            this.sustitucionIntervaloADataGridViewTextBoxColumn.HeaderText = "Sustitucion del Intervalo A";
+            this.sustitucionIntervaloADataGridViewTextBoxColumn.Name = "sustitucionIntervaloADataGridViewTextBoxColumn";
+            // 
+            // sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn
+            // 
+            this.sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn.DataPropertyName = "SustitucionIntervaloAproximacionRaiz";
+            this.sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn.HeaderText = "Sustitucion de la aproximacion de la  raiz";
+            this.sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn.Name = "sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn";
+            // 
+            // productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn
+            // 
+            this.productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn.DataPropertyName = "ProductoSustitucionAyAproximacionRaiz";
+            this.productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn.HeaderText = "Producto de la sustitucion de la sustitucion A y la raiz";
+            this.productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn.Name = "productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn2
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn2.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn2.HeaderText = "Error Relativo Porcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn2.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn2";
+            // 
+            // resultadoModeloBireccionBindingSource
+            // 
+            this.resultadoModeloBireccionBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoModeloBireccion);
+            // 
+            // valorXDataGridViewTextBoxColumn
+            // 
+            this.valorXDataGridViewTextBoxColumn.DataPropertyName = "valorX";
+            this.valorXDataGridViewTextBoxColumn.HeaderText = "valor X";
+            this.valorXDataGridViewTextBoxColumn.Name = "valorXDataGridViewTextBoxColumn";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn3
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn3.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn3.HeaderText = "Error Relativo Porcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn3.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn3";
+            // 
+            // resultadoNewtonRapshonBindingSource
+            // 
+            this.resultadoNewtonRapshonBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoNewtonRapshon);
+            // 
             // funcionDataGridViewTextBoxColumn
             // 
             this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
@@ -1471,6 +1961,40 @@
             // 
             this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
             // 
+            // resultadoNewtonRapshonBindingSource1
+            // 
+            this.resultadoNewtonRapshonBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoNewtonRapshon);
+            // 
+            // funcionDataGridViewTextBoxColumn2
+            // 
+            this.funcionDataGridViewTextBoxColumn2.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn2.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn2.Name = "funcionDataGridViewTextBoxColumn2";
+            // 
+            // derivadaDataGridViewTextBoxColumn
+            // 
+            this.derivadaDataGridViewTextBoxColumn.DataPropertyName = "derivada";
+            this.derivadaDataGridViewTextBoxColumn.HeaderText = "Derivada";
+            this.derivadaDataGridViewTextBoxColumn.Name = "derivadaDataGridViewTextBoxColumn";
+            // 
+            // valorXDataGridViewTextBoxColumn1
+            // 
+            this.valorXDataGridViewTextBoxColumn1.DataPropertyName = "valorX";
+            this.valorXDataGridViewTextBoxColumn1.HeaderText = "valor X";
+            this.valorXDataGridViewTextBoxColumn1.Name = "valorXDataGridViewTextBoxColumn1";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn4
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.HeaderText = "Error Relativo Porcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn4";
+            // 
+            // toleranciaPorcentualDataGridViewTextBoxColumn1
+            // 
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.DataPropertyName = "ToleranciaPorcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.HeaderText = "Tolerancia Porcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.Name = "toleranciaPorcentualDataGridViewTextBoxColumn1";
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1508,6 +2032,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablaSerieMaclaurin)).EndInit();
             this.tabPage22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialSerieMaclaurin)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.tabControl4.ResumeLayout(false);
+            this.tabPage23.ResumeLayout(false);
+            this.tabPage23.PerformLayout();
+            this.tabHistorialBiseccion.ResumeLayout(false);
+            this.tabPage24.ResumeLayout(false);
+            this.tabPage24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaBiseccion)).EndInit();
+            this.tabPage25.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HistorialBiseccion)).EndInit();
+            this.tabPage26.ResumeLayout(false);
+            this.tabPage26.PerformLayout();
+            this.tabHistorialNewtonRapshon.ResumeLayout(false);
+            this.tabPage27.ResumeLayout(false);
+            this.tabPage27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaNewtonRapshon)).EndInit();
+            this.tabPage28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.historialNewtonRapshon)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -1539,8 +2082,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoModeloBireccionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1677,5 +2223,55 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn errorPorcentalDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn toleranciaPorcentualDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabPage tabPage23;
+        private System.Windows.Forms.TabControl tabHistorialBiseccion;
+        private System.Windows.Forms.TabPage tabPage24;
+        private System.Windows.Forms.Label lblResultadoBiseccion;
+        private System.Windows.Forms.TabPage tabPage25;
+        private System.Windows.Forms.DataGridView HistorialBiseccion;
+        private System.Windows.Forms.Button btnCalcularBiseccion;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtFuncionBiseccion;
+        private System.Windows.Forms.TabPage tabPage26;
+        private System.Windows.Forms.TabControl tabHistorialNewtonRapshon;
+        private System.Windows.Forms.TabPage tabPage27;
+        private System.Windows.Forms.TabPage tabPage28;
+        private System.Windows.Forms.DataGridView historialNewtonRapshon;
+        private System.Windows.Forms.Label labelInstruccionesUnidad2;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtIntervaloBBiseccion;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtIntervaloABiseccion;
+        private System.Windows.Forms.DataGridView tablaBiseccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intervaloADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn intervaloBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aproximacionRaizDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sustitucionIntervaloADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sustitucionIntervaloAproximacionRaizDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoSustitucionAyAproximacionRaizDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.BindingSource resultadoModeloBireccionBindingSource;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtCifrasBiseccion;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtCifrasSignificativasNewtonRapshon;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtValorInicialNewtonRapshon;
+        private System.Windows.Forms.Button btnCalcularNewtonRapshon;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtFuncionNewtonRapshon;
+        private System.Windows.Forms.DataGridView tablaNewtonRapshon;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource resultadoNewtonRapshonBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn funcionDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn derivadaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorXDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn toleranciaPorcentualDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource resultadoNewtonRapshonBindingSource1;
     }
 }

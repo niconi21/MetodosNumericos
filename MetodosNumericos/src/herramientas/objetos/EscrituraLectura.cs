@@ -1,4 +1,5 @@
 ﻿using MetodosNumericos.src.herramientas.objetos.Unidad_1;
+using MetodosNumericos.src.herramientas.objetos.Unidad_2;
 using MetodosNumericos.src.herramientas.objetos.Unidad_4;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
 using System;
@@ -109,6 +110,74 @@ namespace MetodosNumericos.src.herramientas.objetos
             return resultados;
         }
         ////////////////
+        ////unidad 2////
+        ////////////////
+        public List<ResultadoModeloBireccion> leerBiseccion()
+        {
+            List<ResultadoModeloBireccion> resultados = new List<ResultadoModeloBireccion>();
+            StreamReader sr = new StreamReader(_ruta + "Biseccion_Unidad2.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoModeloBireccion
+                    {
+                        Funcion = datos[0],
+                        IntervaloA = double.Parse(datos[1]),
+                        IntervaloB = double.Parse(datos[2]),
+                        AproximacionRaiz = double.Parse(datos[3])
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
+
+        public void escribirBiseccion(ResultadoModeloBireccion resultados)
+        {
+            StreamWriter sr = new StreamWriter(_ruta + "Biseccion_Unidad2.txt", true);
+            sr.WriteLine(resultados.Funcion + "," +
+                resultados.IntervaloA + "," +
+                resultados.IntervaloB + "," +
+                resultados.AproximacionRaiz);
+            sr.Close();
+        }
+        public void escribirNewtonRapshon(ResultadoNewtonRapshon resultados)
+        {
+            StreamWriter sr = new StreamWriter(_ruta + "NewtonRapshon_Unidad2.txt", true);
+            sr.WriteLine(resultados.Funcion + "," +
+                resultados.Derivada.unirTerminos() + "," +
+                resultados.valorX + "," +
+                resultados.ErrorRelativoPorcentual + "," +
+                resultados.ToleranciaPorcentual);
+            sr.Close();
+        }
+        public List<ResultadoNewtonRapshon> leerNewtonRapshon()
+        {
+            List<ResultadoNewtonRapshon> resultados = new List<ResultadoNewtonRapshon>();
+            StreamReader sr = new StreamReader(_ruta + "NewtonRapshon_Unidad2.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoNewtonRapshon
+                    {
+                        Funcion = datos[0],
+                        derivada = datos[1],
+                        valorX = double.Parse(datos[2]),
+                        ErrorRelativoPorcentual = double.Parse(datos[3]),
+                        ToleranciaPorcentual = double.Parse(datos[4])
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
+        ////////////////
         ////unidad 4////
         ////////////////
         public void escribirDiferenciacionUnidad4(Resultados resultados)
@@ -137,12 +206,12 @@ namespace MetodosNumericos.src.herramientas.objetos
                     resultados.Add(new Resultados
                     {
                         Funcion = datos[0],
-                        DosPuntosInfinitasProgresivas = float.Parse(datos[1]),
-                        TresPuntosInfinitasProgresivas = float.Parse(datos[2]),
-                        DosPuntosInfinitasCentradas = float.Parse(datos[3]),
-                        TresPuntosInfinitasCentradas = float.Parse(datos[4]),
-                        DosPuntosInfinitasRegresivas = float.Parse(datos[5]),
-                        TresPuntosInfinitasRegresivas = float.Parse(datos[6]),
+                        DosPuntosInfinitasProgresivas = double.Parse(datos[1]),
+                        TresPuntosInfinitasProgresivas = double.Parse(datos[2]),
+                        DosPuntosInfinitasCentradas = double.Parse(datos[3]),
+                        TresPuntosInfinitasCentradas = double.Parse(datos[4]),
+                        DosPuntosInfinitasRegresivas = double.Parse(datos[5]),
+                        TresPuntosInfinitasRegresivas = double.Parse(datos[6]),
                     });
                 }
             }   
@@ -170,8 +239,8 @@ namespace MetodosNumericos.src.herramientas.objetos
                     resultados.Add(new ResultadosTrapecio
                     {
                         Funcion = datos[0],
-                        Simple = float.Parse(datos[1]),
-                        Compuesto = float.Parse(datos[2])
+                        Simple = double.Parse(datos[1]),
+                        Compuesto = double.Parse(datos[2])
                     });
                 }
             }
@@ -213,16 +282,16 @@ namespace MetodosNumericos.src.herramientas.objetos
                     ResultadoLangrage resultado= new ResultadoLangrage();
                     int longitud = datos.Length - 1;
                     longitud /= 2;
-                    float[] puntosX = new float[longitud];
-                    float[] puntosY = new float[longitud];
+                    double[] puntosX = new double[longitud];
+                    double[] puntosY = new double[longitud];
                     for (int i = 0; i < longitud; i++)
                     {
-                        puntosX[i] = float.Parse(datos[i + 1]);
+                        puntosX[i] = double.Parse(datos[i + 1]);
                     }
                     
                     for (int i = 0; i < longitud; i++)
                     {
-                        puntosX[i] = float.Parse(datos[i + longitud + 1]);
+                        puntosX[i] = double.Parse(datos[i + longitud + 1]);
                     }
                     resultado.Funcion = datos[0];
                     resultado.puntosX = puntosX;
@@ -233,5 +302,10 @@ namespace MetodosNumericos.src.herramientas.objetos
             return resultados;
         }
 
+
+
+
+
+      
     }
 }
