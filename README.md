@@ -1,6 +1,8 @@
 # Métodos Numéricos
 
 Para no tenert ningun problema con la ejecución, debes de tener la siguiente jerarquia en tu computadora.
+En la carpeta del historial se guardan los archivos que son usados como historial.
+En las carpetas de los temas de cada unidad son usadas para almacenar las imagenes de las graficas.
 
 <pre>
 c:\
