@@ -14,6 +14,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
 using MetodosNumericos.src.herramientas.objetos.Unidad_1;
 using MetodosNumericos.src.herramientas.objetos.Unidad_2;
+using MetodosNumericos.src.herramientas.objetos.Unidad_3;
 
 namespace MetodosNumericos.src.vistas
 {
@@ -209,9 +210,78 @@ namespace MetodosNumericos.src.vistas
         //////////////
         ///Unidad 3///
         //////////////
+        private void btnCalcularJacobi_Click(object sender, EventArgs e)
+        {
+            double[] terminoIndependiente = new double[5];
+            double[] constanteV = new double[5];
+            double[] constanteW = new double[5];
+            double[] constanteX = new double[5];
+            double[] constanteY = new double[5];
+            double[] constanteZ = new double[5];
+            double[] valorInicial = new double[5];
+            for (int i = 0; i < 5; i++)
+            {
+                terminoIndependiente[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[0 + (7 * i)]).Text);
+                constanteV[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[1 + (7 * i)]).Text);
+                constanteW[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[2 + (7 * i)]).Text);
+                constanteX[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[3 + (7 * i)]).Text);
+                constanteY[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[4 + (7 * i)]).Text);
+                constanteZ[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[5 + (7 * i)]).Text);
+                valorInicial[i] = double.Parse(((TextBox)flowContenedorConstantes.Controls[6 + (7 * i)]).Text);
+            }
+            int cifrasSignificativas = int.Parse(txtCifrasSignificativasJacobi.Text);
+            _modelo = new ModeloJacobi(cifrasSignificativas, terminoIndependiente, constanteV, constanteW, constanteX, constanteY, constanteZ, valorInicial);
+            var resultados = ((ModeloJacobi)_modelo).resultado();
+            tablaJacobi.DataSource = resultados;
+            _escribirLeer.escribirJacobi(resultados.ElementAt(resultados.Count - 1));
+        }
+        private void tabJacobi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                historialJacobi.DataSource = _escribirLeer.leerJacobi();
+            }
+            catch { }
+        }
+            
+        private void btnCalcularGaussSendel_Click(object sender, EventArgs e)
+        {
+            double[] terminoIndependiente = new double[5];
+            double[] constanteV = new double[5];
+            double[] constanteW = new double[5];
+            double[] constanteX = new double[5];
+            double[] constanteY = new double[5];
+            double[] constanteZ = new double[5];
+            double[] valorInicial = new double[5];
+            for (int i = 0; i < 5; i++)
+            {
+                terminoIndependiente[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[0 + (7 * i)]).Text);
+                constanteV[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[1 + (7 * i)]).Text);
+                constanteW[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[2 + (7 * i)]).Text);
+                constanteX[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[3 + (7 * i)]).Text);
+                constanteY[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[4 + (7 * i)]).Text);
+                constanteZ[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[5 + (7 * i)]).Text);
+                valorInicial[i] = double.Parse(((TextBox)flowContenedorConstantesGauss.Controls[6 + (7 * i)]).Text);
+            }
+            int cifrasSignificativas = int.Parse(txtCifrasSignificativasGaussSendel.Text);
+            _modelo = new ModeloGaussSendel(cifrasSignificativas, terminoIndependiente, constanteV, constanteW, constanteX, constanteY, constanteZ, valorInicial);
+            var resultados = ((ModeloGaussSendel)_modelo).resultado();
+            tablaGaussSendel.DataSource = resultados;
+            _escribirLeer.escribirGaussSendel(resultados.ElementAt(resultados.Count - 1));
+            
+        }
+        private void tabGaussSendel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HistorialGaussSendel.DataSource = _escribirLeer.leerGaussSendel();
+            }
+            catch { }
+        }
         //////////////
         ///Unidad 4///
         //////////////
+
         private void btnDiferenciacionUnidad4_Click(object sender, EventArgs e)
         {
             String funcion = txtFuncionUnidad4.Text;
@@ -297,6 +367,7 @@ namespace MetodosNumericos.src.vistas
             }
             catch {}
         }
+        
         //////////////
         ///Unidad 5///
         //////////////
@@ -349,11 +420,8 @@ namespace MetodosNumericos.src.vistas
 
         
 
-
-
-   
-
-
+        
+        
 
         
     }

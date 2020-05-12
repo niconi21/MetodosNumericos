@@ -64,6 +64,9 @@
     <Compile Include="src\herramientas\objetos\Unidad 2\ModeloNewtonRapshon.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 2\ResultadoModeloBireccion.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 2\ResultadoNewtonRapshon.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 3\ModeloGaussSendel.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 3\ModeloJacobi.cs" />
+    <Compile Include="src\herramientas\objetos\Unidad 3\ResultadoJacobi.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloDiferenciacionNumerica.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\ModeloTrapecio.cs" />
     <Compile Include="src\herramientas\objetos\Unidad 4\Resultados.cs" />
@@ -107,9 +110,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\herramientas\objetos\Unidad 3\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

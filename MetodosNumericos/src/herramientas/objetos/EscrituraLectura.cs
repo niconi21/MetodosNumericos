@@ -1,5 +1,6 @@
 ﻿using MetodosNumericos.src.herramientas.objetos.Unidad_1;
 using MetodosNumericos.src.herramientas.objetos.Unidad_2;
+using MetodosNumericos.src.herramientas.objetos.Unidad_3;
 using MetodosNumericos.src.herramientas.objetos.Unidad_4;
 using MetodosNumericos.src.herramientas.objetos.Unidad_5;
 using System;
@@ -177,6 +178,100 @@ namespace MetodosNumericos.src.herramientas.objetos
             sr.Close();
             return resultados;
         }
+
+        ////////////////
+        ////unidad 3////
+        ////////////////
+        public void escribirJacobi(ResultadoJacobi resultados)
+        {
+            StreamWriter sr = new StreamWriter(_ruta + "Jacobi_unidad3.txt", true);
+            sr.WriteLine(resultados.ValorInicial1 + "," +
+                         resultados.ValorInicial2 + "," +
+                         resultados.ValorInicial3 + "," +
+                         resultados.ValorInicial4 + "," +
+                         resultados.ValorInicial5 + "," +
+                         resultados.ErrorRelativoPorcentual1 + "," +
+                         resultados.ErrorRelativoPorcentual2 + "," +
+                         resultados.ErrorRelativoPorcentual3 + "," +
+                         resultados.ErrorRelativoPorcentual4 + "," +
+                         resultados.ErrorRelativoPorcentual5 + "," +
+                         resultados.ToleranciaPorcentual);
+            sr.Close();
+        }
+        public List<ResultadoJacobi> leerJacobi()
+        {
+            List<ResultadoJacobi> resultados = new List<ResultadoJacobi>();
+            StreamReader sr = new StreamReader(_ruta + "Jacobi_unidad3.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoJacobi
+                    {
+                        ValorInicial1 = double.Parse(datos[0]),
+                        ValorInicial2 = double.Parse(datos[1]),
+                        ValorInicial3 = double.Parse(datos[2]),
+                        ValorInicial4 = double.Parse(datos[3]),
+                        ValorInicial5 = double.Parse(datos[4]),
+                        ErrorRelativoPorcentual1 = double.Parse(datos[5]),
+                        ErrorRelativoPorcentual2 = double.Parse(datos[6]),
+                        ErrorRelativoPorcentual3 = double.Parse(datos[7]),
+                        ErrorRelativoPorcentual4 = double.Parse(datos[8]),
+                        ErrorRelativoPorcentual5 = double.Parse(datos[9]),
+                        ToleranciaPorcentual = double.Parse(datos[10])
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
+        internal void escribirGaussSendel(ResultadoJacobi resultados)
+        {
+            StreamWriter sr = new StreamWriter(_ruta + "GaussSendel_unidad3.txt", true);
+            sr.WriteLine(resultados.ValorInicial1 + "," +
+                         resultados.ValorInicial2 + "," +
+                         resultados.ValorInicial3 + "," +
+                         resultados.ValorInicial4 + "," +
+                         resultados.ValorInicial5 + "," +
+                         resultados.ErrorRelativoPorcentual1 + "," +
+                         resultados.ErrorRelativoPorcentual2 + "," +
+                         resultados.ErrorRelativoPorcentual3 + "," +
+                         resultados.ErrorRelativoPorcentual4 + "," +
+                         resultados.ErrorRelativoPorcentual5 + "," +
+                         resultados.ToleranciaPorcentual);
+            sr.Close();
+        }
+        public List<ResultadoJacobi> leerGaussSendel()
+        {
+            List<ResultadoJacobi> resultados = new List<ResultadoJacobi>();
+            StreamReader sr = new StreamReader(_ruta + "GaussSendel_unidad3.txt");
+            var lineas = sr.ReadToEnd().Split('\n');
+            foreach (var linea in lineas)
+            {
+                if (!linea.Equals(""))
+                {
+                    var datos = linea.Split(',');
+                    resultados.Add(new ResultadoJacobi
+                    {
+                        ValorInicial1 = double.Parse(datos[0]),
+                        ValorInicial2 = double.Parse(datos[1]),
+                        ValorInicial3 = double.Parse(datos[2]),
+                        ValorInicial4 = double.Parse(datos[3]),
+                        ValorInicial5 = double.Parse(datos[4]),
+                        ErrorRelativoPorcentual1 = double.Parse(datos[5]),
+                        ErrorRelativoPorcentual2 = double.Parse(datos[6]),
+                        ErrorRelativoPorcentual3 = double.Parse(datos[7]),
+                        ErrorRelativoPorcentual4 = double.Parse(datos[8]),
+                        ErrorRelativoPorcentual5 = double.Parse(datos[9]),
+                        ToleranciaPorcentual = double.Parse(datos[10])
+                    });
+                }
+            }
+            sr.Close();
+            return resultados;
+        }
         ////////////////
         ////unidad 4////
         ////////////////
@@ -247,7 +342,7 @@ namespace MetodosNumericos.src.herramientas.objetos
             return resultados;
         }
         ////////////////
-        ////unidad 4////
+        ////unidad 5////
         ////////////////
         public void escribirLangrageUnidad5(ResultadoLangrage resultados)
         {
@@ -306,6 +401,9 @@ namespace MetodosNumericos.src.herramientas.objetos
 
 
 
-      
+
+
+
+     
     }
 }

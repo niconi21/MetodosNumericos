@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -111,6 +112,64 @@
             this.labelInstruccionesUnidad2 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage29 = new System.Windows.Forms.TabPage();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtX5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtX4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtX1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtX2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtX3Jacobi = new System.Windows.Forms.TextBox();
+            this.txtY5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtY4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtY1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtY2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtY3Jacobi = new System.Windows.Forms.TextBox();
+            this.txtTI5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtV5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtW5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtZ5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtTI4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtV4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtW4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtZ4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtV1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtTI1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtTI2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtTI3Jacobi = new System.Windows.Forms.TextBox();
+            this.txtV2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtV3Jacobi = new System.Windows.Forms.TextBox();
+            this.txtW1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtW2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtW3Jacobi = new System.Windows.Forms.TextBox();
+            this.txtZ1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtZ2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtZ3Jacobi = new System.Windows.Forms.TextBox();
+            this.tabJacobi = new System.Windows.Forms.TabControl();
+            this.tabPage30 = new System.Windows.Forms.TabPage();
+            this.tablaJacobi = new System.Windows.Forms.DataGridView();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tabPage31 = new System.Windows.Forms.TabPage();
+            this.historialJacobi = new System.Windows.Forms.DataGridView();
+            this.btnCalcularJacobi = new System.Windows.Forms.Button();
+            this.tabPage32 = new System.Windows.Forms.TabPage();
+            this.tabGaussSendel = new System.Windows.Forms.TabControl();
+            this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.tablaGaussSendel = new System.Windows.Forms.DataGridView();
+            this.tabPage34 = new System.Windows.Forms.TabPage();
+            this.HistorialGaussSendel = new System.Windows.Forms.DataGridView();
+            this.lblInstruccionesUnidad3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.txtFuncionUnidad4 = new System.Windows.Forms.TextBox();
@@ -165,6 +224,67 @@
             this.lblInstruccionesUnidad5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.grafica = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txtValorInicial5Jacobi = new System.Windows.Forms.TextBox();
+            this.txtValorInicial4Jacobi = new System.Windows.Forms.TextBox();
+            this.txtValorInicial1Jacobi = new System.Windows.Forms.TextBox();
+            this.txtValorInicial2Jacobi = new System.Windows.Forms.TextBox();
+            this.txtValorInicial3Jacobi = new System.Windows.Forms.TextBox();
+            this.flowContenedorConstantes = new System.Windows.Forms.FlowLayoutPanel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.txtCifrasSignificativasJacobi = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtCifrasSignificativasGaussSendel = new System.Windows.Forms.TextBox();
+            this.flowContenedorConstantesGauss = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.textBox30 = new System.Windows.Forms.TextBox();
+            this.textBox31 = new System.Windows.Forms.TextBox();
+            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox33 = new System.Windows.Forms.TextBox();
+            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.textBox36 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.btnCalcularGaussSendel = new System.Windows.Forms.Button();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoExactitudPrecisionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.limiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -194,6 +314,12 @@
             this.valorXDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorRelativoPorcentualDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadoNewtonRapshonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.funcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.derivadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorXDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultadoNewtonRapshonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.funcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dosPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tresPuntosInfinitasProgresivasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -206,12 +332,6 @@
             this.simpleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compuestoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resultadosTrapecioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resultadoNewtonRapshonBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.funcionDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.derivadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorXDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorRelativoPorcentualDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toleranciaPorcentualDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -247,6 +367,19 @@
             this.tabPage28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialNewtonRapshon)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage29.SuspendLayout();
+            this.tabJacobi.SuspendLayout();
+            this.tabPage30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJacobi)).BeginInit();
+            this.tabPage31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historialJacobi)).BeginInit();
+            this.tabPage32.SuspendLayout();
+            this.tabGaussSendel.SuspendLayout();
+            this.tabPage33.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaGaussSendel)).BeginInit();
+            this.tabPage34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HistorialGaussSendel)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -266,14 +399,16 @@
             this.tabPage13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).BeginInit();
+            this.flowContenedorConstantes.SuspendLayout();
+            this.flowContenedorConstantesGauss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoModeloBireccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1135,6 +1270,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.tabControl5);
+            this.tabPage3.Controls.Add(this.lblInstruccionesUnidad3);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -1142,6 +1279,598 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Unidad 3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage29);
+            this.tabControl5.Controls.Add(this.tabPage32);
+            this.tabControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl5.Location = new System.Drawing.Point(0, 38);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(650, 526);
+            this.tabControl5.TabIndex = 10;
+            // 
+            // tabPage29
+            // 
+            this.tabPage29.Controls.Add(this.label53);
+            this.tabPage29.Controls.Add(this.txtCifrasSignificativasJacobi);
+            this.tabPage29.Controls.Add(this.flowContenedorConstantes);
+            this.tabPage29.Controls.Add(this.label52);
+            this.tabPage29.Controls.Add(this.label51);
+            this.tabPage29.Controls.Add(this.label49);
+            this.tabPage29.Controls.Add(this.label50);
+            this.tabPage29.Controls.Add(this.label48);
+            this.tabPage29.Controls.Add(this.label39);
+            this.tabPage29.Controls.Add(this.label37);
+            this.tabPage29.Controls.Add(this.label34);
+            this.tabPage29.Controls.Add(this.label36);
+            this.tabPage29.Controls.Add(this.label28);
+            this.tabPage29.Controls.Add(this.label33);
+            this.tabPage29.Controls.Add(this.label27);
+            this.tabPage29.Controls.Add(this.label21);
+            this.tabPage29.Controls.Add(this.tabJacobi);
+            this.tabPage29.Controls.Add(this.btnCalcularJacobi);
+            this.tabPage29.Location = new System.Drawing.Point(4, 22);
+            this.tabPage29.Name = "tabPage29";
+            this.tabPage29.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage29.Size = new System.Drawing.Size(642, 500);
+            this.tabPage29.TabIndex = 0;
+            this.tabPage29.Text = "Jacobi";
+            this.tabPage29.UseVisualStyleBackColor = true;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label51.Location = new System.Drawing.Point(3, 3);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(506, 39);
+            this.label51.TabIndex = 157;
+            this.label51.Text = resources.GetString("label51.Text");
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(413, 51);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(17, 17);
+            this.label49.TabIndex = 156;
+            this.label49.Text = "Z";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(355, 53);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(20, 17);
+            this.label50.TabIndex = 155;
+            this.label50.Text = "Y";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(299, 53);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(20, 17);
+            this.label48.TabIndex = 154;
+            this.label48.Text = "X";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(241, 55);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(24, 17);
+            this.label39.TabIndex = 153;
+            this.label39.Text = "W";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(181, 55);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(19, 17);
+            this.label37.TabIndex = 152;
+            this.label37.Text = "V";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(119, 55);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(29, 17);
+            this.label34.TabIndex = 151;
+            this.label34.Text = "T.I";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(56, 168);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(30, 17);
+            this.label36.TabIndex = 150;
+            this.label36.Text = "Z =";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(56, 146);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(33, 17);
+            this.label28.TabIndex = 149;
+            this.label28.Text = "Y =";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(56, 122);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(33, 17);
+            this.label33.TabIndex = 148;
+            this.label33.Text = "X =";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(56, 99);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(32, 17);
+            this.label27.TabIndex = 147;
+            this.label27.Text = "W=";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(56, 75);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(37, 17);
+            this.label21.TabIndex = 146;
+            this.label21.Text = "V = ";
+            // 
+            // txtX5Jacobi
+            // 
+            this.txtX5Jacobi.Location = new System.Drawing.Point(60, 98);
+            this.txtX5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX5Jacobi.Name = "txtX5Jacobi";
+            this.txtX5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtX5Jacobi.TabIndex = 145;
+            this.txtX5Jacobi.Text = "+0";
+            // 
+            // txtX4Jacobi
+            // 
+            this.txtX4Jacobi.Location = new System.Drawing.Point(2, 98);
+            this.txtX4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX4Jacobi.Name = "txtX4Jacobi";
+            this.txtX4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtX4Jacobi.TabIndex = 144;
+            this.txtX4Jacobi.Text = "+0.5";
+            // 
+            // txtX1Jacobi
+            // 
+            this.txtX1Jacobi.Location = new System.Drawing.Point(350, 74);
+            this.txtX1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX1Jacobi.Name = "txtX1Jacobi";
+            this.txtX1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtX1Jacobi.TabIndex = 141;
+            this.txtX1Jacobi.Text = "+0";
+            // 
+            // txtX2Jacobi
+            // 
+            this.txtX2Jacobi.Location = new System.Drawing.Point(292, 74);
+            this.txtX2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX2Jacobi.Name = "txtX2Jacobi";
+            this.txtX2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtX2Jacobi.TabIndex = 142;
+            this.txtX2Jacobi.Text = "+0.25";
+            // 
+            // txtX3Jacobi
+            // 
+            this.txtX3Jacobi.Location = new System.Drawing.Point(234, 74);
+            this.txtX3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX3Jacobi.Name = "txtX3Jacobi";
+            this.txtX3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtX3Jacobi.TabIndex = 143;
+            this.txtX3Jacobi.Text = "+0";
+            // 
+            // txtY5Jacobi
+            // 
+            this.txtY5Jacobi.Location = new System.Drawing.Point(176, 74);
+            this.txtY5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY5Jacobi.Name = "txtY5Jacobi";
+            this.txtY5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtY5Jacobi.TabIndex = 140;
+            this.txtY5Jacobi.Text = "+0.25";
+            // 
+            // txtY4Jacobi
+            // 
+            this.txtY4Jacobi.Location = new System.Drawing.Point(118, 74);
+            this.txtY4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY4Jacobi.Name = "txtY4Jacobi";
+            this.txtY4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtY4Jacobi.TabIndex = 139;
+            this.txtY4Jacobi.Text = "+0";
+            // 
+            // txtY1Jacobi
+            // 
+            this.txtY1Jacobi.Location = new System.Drawing.Point(60, 74);
+            this.txtY1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY1Jacobi.Name = "txtY1Jacobi";
+            this.txtY1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtY1Jacobi.TabIndex = 136;
+            this.txtY1Jacobi.Text = "+0";
+            // 
+            // txtY2Jacobi
+            // 
+            this.txtY2Jacobi.Location = new System.Drawing.Point(2, 74);
+            this.txtY2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY2Jacobi.Name = "txtY2Jacobi";
+            this.txtY2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtY2Jacobi.TabIndex = 137;
+            this.txtY2Jacobi.Text = "+1.5";
+            // 
+            // txtY3Jacobi
+            // 
+            this.txtY3Jacobi.Location = new System.Drawing.Point(350, 50);
+            this.txtY3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY3Jacobi.Name = "txtY3Jacobi";
+            this.txtY3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtY3Jacobi.TabIndex = 138;
+            this.txtY3Jacobi.Text = "+0";
+            // 
+            // txtTI5Jacobi
+            // 
+            this.txtTI5Jacobi.Location = new System.Drawing.Point(292, 50);
+            this.txtTI5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTI5Jacobi.Name = "txtTI5Jacobi";
+            this.txtTI5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtTI5Jacobi.TabIndex = 132;
+            this.txtTI5Jacobi.Text = "+0";
+            // 
+            // txtV5Jacobi
+            // 
+            this.txtV5Jacobi.Location = new System.Drawing.Point(234, 50);
+            this.txtV5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtV5Jacobi.Name = "txtV5Jacobi";
+            this.txtV5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtV5Jacobi.TabIndex = 133;
+            this.txtV5Jacobi.Text = "+0.25";
+            // 
+            // txtW5Jacobi
+            // 
+            this.txtW5Jacobi.Location = new System.Drawing.Point(176, 50);
+            this.txtW5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtW5Jacobi.Name = "txtW5Jacobi";
+            this.txtW5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtW5Jacobi.TabIndex = 134;
+            this.txtW5Jacobi.Text = "+0";
+            // 
+            // txtZ5Jacobi
+            // 
+            this.txtZ5Jacobi.Location = new System.Drawing.Point(118, 50);
+            this.txtZ5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZ5Jacobi.Name = "txtZ5Jacobi";
+            this.txtZ5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtZ5Jacobi.TabIndex = 135;
+            this.txtZ5Jacobi.Text = "+0";
+            // 
+            // txtTI4Jacobi
+            // 
+            this.txtTI4Jacobi.Location = new System.Drawing.Point(60, 50);
+            this.txtTI4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTI4Jacobi.Name = "txtTI4Jacobi";
+            this.txtTI4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtTI4Jacobi.TabIndex = 128;
+            this.txtTI4Jacobi.Text = "+0";
+            // 
+            // txtV4Jacobi
+            // 
+            this.txtV4Jacobi.Location = new System.Drawing.Point(2, 50);
+            this.txtV4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtV4Jacobi.Name = "txtV4Jacobi";
+            this.txtV4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtV4Jacobi.TabIndex = 129;
+            this.txtV4Jacobi.Text = "+0.5";
+            // 
+            // txtW4Jacobi
+            // 
+            this.txtW4Jacobi.Location = new System.Drawing.Point(350, 26);
+            this.txtW4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtW4Jacobi.Name = "txtW4Jacobi";
+            this.txtW4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtW4Jacobi.TabIndex = 130;
+            this.txtW4Jacobi.Text = "+0";
+            // 
+            // txtZ4Jacobi
+            // 
+            this.txtZ4Jacobi.Location = new System.Drawing.Point(292, 26);
+            this.txtZ4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZ4Jacobi.Name = "txtZ4Jacobi";
+            this.txtZ4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtZ4Jacobi.TabIndex = 131;
+            this.txtZ4Jacobi.Text = "+0";
+            // 
+            // txtV1Jacobi
+            // 
+            this.txtV1Jacobi.Location = new System.Drawing.Point(234, 26);
+            this.txtV1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtV1Jacobi.Name = "txtV1Jacobi";
+            this.txtV1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtV1Jacobi.TabIndex = 119;
+            this.txtV1Jacobi.Text = "+0";
+            // 
+            // txtTI1Jacobi
+            // 
+            this.txtTI1Jacobi.Location = new System.Drawing.Point(2, 2);
+            this.txtTI1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTI1Jacobi.Name = "txtTI1Jacobi";
+            this.txtTI1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtTI1Jacobi.TabIndex = 116;
+            this.txtTI1Jacobi.Text = "+0";
+            // 
+            // txtTI2Jacobi
+            // 
+            this.txtTI2Jacobi.Location = new System.Drawing.Point(176, 26);
+            this.txtTI2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTI2Jacobi.Name = "txtTI2Jacobi";
+            this.txtTI2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtTI2Jacobi.TabIndex = 117;
+            this.txtTI2Jacobi.Text = "+0";
+            // 
+            // txtTI3Jacobi
+            // 
+            this.txtTI3Jacobi.Location = new System.Drawing.Point(118, 26);
+            this.txtTI3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTI3Jacobi.Name = "txtTI3Jacobi";
+            this.txtTI3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtTI3Jacobi.TabIndex = 118;
+            this.txtTI3Jacobi.Text = "+0";
+            // 
+            // txtV2Jacobi
+            // 
+            this.txtV2Jacobi.Location = new System.Drawing.Point(60, 26);
+            this.txtV2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtV2Jacobi.Name = "txtV2Jacobi";
+            this.txtV2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtV2Jacobi.TabIndex = 120;
+            this.txtV2Jacobi.Text = "+0";
+            // 
+            // txtV3Jacobi
+            // 
+            this.txtV3Jacobi.Location = new System.Drawing.Point(2, 26);
+            this.txtV3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtV3Jacobi.Name = "txtV3Jacobi";
+            this.txtV3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtV3Jacobi.TabIndex = 121;
+            this.txtV3Jacobi.Text = "+0";
+            // 
+            // txtW1Jacobi
+            // 
+            this.txtW1Jacobi.Location = new System.Drawing.Point(350, 2);
+            this.txtW1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtW1Jacobi.Name = "txtW1Jacobi";
+            this.txtW1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtW1Jacobi.TabIndex = 122;
+            this.txtW1Jacobi.Text = "+0";
+            // 
+            // txtW2Jacobi
+            // 
+            this.txtW2Jacobi.Location = new System.Drawing.Point(292, 2);
+            this.txtW2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtW2Jacobi.Name = "txtW2Jacobi";
+            this.txtW2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtW2Jacobi.TabIndex = 123;
+            this.txtW2Jacobi.Text = "+0";
+            // 
+            // txtW3Jacobi
+            // 
+            this.txtW3Jacobi.Location = new System.Drawing.Point(234, 2);
+            this.txtW3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtW3Jacobi.Name = "txtW3Jacobi";
+            this.txtW3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtW3Jacobi.TabIndex = 124;
+            this.txtW3Jacobi.Text = "+0";
+            // 
+            // txtZ1Jacobi
+            // 
+            this.txtZ1Jacobi.Location = new System.Drawing.Point(176, 2);
+            this.txtZ1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZ1Jacobi.Name = "txtZ1Jacobi";
+            this.txtZ1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtZ1Jacobi.TabIndex = 125;
+            this.txtZ1Jacobi.Text = "+0";
+            // 
+            // txtZ2Jacobi
+            // 
+            this.txtZ2Jacobi.Location = new System.Drawing.Point(118, 2);
+            this.txtZ2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZ2Jacobi.Name = "txtZ2Jacobi";
+            this.txtZ2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtZ2Jacobi.TabIndex = 126;
+            this.txtZ2Jacobi.Text = "+0";
+            // 
+            // txtZ3Jacobi
+            // 
+            this.txtZ3Jacobi.Location = new System.Drawing.Point(60, 2);
+            this.txtZ3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtZ3Jacobi.Name = "txtZ3Jacobi";
+            this.txtZ3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtZ3Jacobi.TabIndex = 127;
+            this.txtZ3Jacobi.Text = "+0";
+            // 
+            // tabJacobi
+            // 
+            this.tabJacobi.Controls.Add(this.tabPage30);
+            this.tabJacobi.Controls.Add(this.tabPage31);
+            this.tabJacobi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabJacobi.Location = new System.Drawing.Point(3, 263);
+            this.tabJacobi.Name = "tabJacobi";
+            this.tabJacobi.SelectedIndex = 0;
+            this.tabJacobi.Size = new System.Drawing.Size(636, 234);
+            this.tabJacobi.TabIndex = 8;
+            this.tabJacobi.Click += new System.EventHandler(this.tabJacobi_Click);
+            // 
+            // tabPage30
+            // 
+            this.tabPage30.Controls.Add(this.tablaJacobi);
+            this.tabPage30.Controls.Add(this.label29);
+            this.tabPage30.Location = new System.Drawing.Point(4, 22);
+            this.tabPage30.Name = "tabPage30";
+            this.tabPage30.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage30.Size = new System.Drawing.Size(628, 208);
+            this.tabPage30.TabIndex = 0;
+            this.tabPage30.Text = "Resultado";
+            this.tabPage30.UseVisualStyleBackColor = true;
+            // 
+            // tablaJacobi
+            // 
+            this.tablaJacobi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaJacobi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tablaJacobi.Location = new System.Drawing.Point(3, 56);
+            this.tablaJacobi.Name = "tablaJacobi";
+            this.tablaJacobi.Size = new System.Drawing.Size(622, 149);
+            this.tablaJacobi.TabIndex = 20;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(20, 21);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(108, 19);
+            this.label29.TabIndex = 19;
+            this.label29.Text = "Resultados:";
+            // 
+            // tabPage31
+            // 
+            this.tabPage31.Controls.Add(this.historialJacobi);
+            this.tabPage31.Location = new System.Drawing.Point(4, 22);
+            this.tabPage31.Name = "tabPage31";
+            this.tabPage31.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage31.Size = new System.Drawing.Size(628, 208);
+            this.tabPage31.TabIndex = 1;
+            this.tabPage31.Text = "Historial";
+            this.tabPage31.UseVisualStyleBackColor = true;
+            // 
+            // historialJacobi
+            // 
+            this.historialJacobi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.historialJacobi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historialJacobi.Location = new System.Drawing.Point(3, 3);
+            this.historialJacobi.Name = "historialJacobi";
+            this.historialJacobi.Size = new System.Drawing.Size(622, 202);
+            this.historialJacobi.TabIndex = 0;
+            // 
+            // btnCalcularJacobi
+            // 
+            this.btnCalcularJacobi.Location = new System.Drawing.Point(549, 171);
+            this.btnCalcularJacobi.Name = "btnCalcularJacobi";
+            this.btnCalcularJacobi.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularJacobi.TabIndex = 7;
+            this.btnCalcularJacobi.Text = "Calcular";
+            this.btnCalcularJacobi.UseVisualStyleBackColor = true;
+            this.btnCalcularJacobi.Click += new System.EventHandler(this.btnCalcularJacobi_Click);
+            // 
+            // tabPage32
+            // 
+            this.tabPage32.Controls.Add(this.label38);
+            this.tabPage32.Controls.Add(this.txtCifrasSignificativasGaussSendel);
+            this.tabPage32.Controls.Add(this.flowContenedorConstantesGauss);
+            this.tabPage32.Controls.Add(this.label40);
+            this.tabPage32.Controls.Add(this.label41);
+            this.tabPage32.Controls.Add(this.label42);
+            this.tabPage32.Controls.Add(this.label43);
+            this.tabPage32.Controls.Add(this.label44);
+            this.tabPage32.Controls.Add(this.label45);
+            this.tabPage32.Controls.Add(this.label46);
+            this.tabPage32.Controls.Add(this.label47);
+            this.tabPage32.Controls.Add(this.label54);
+            this.tabPage32.Controls.Add(this.label55);
+            this.tabPage32.Controls.Add(this.label56);
+            this.tabPage32.Controls.Add(this.label57);
+            this.tabPage32.Controls.Add(this.label58);
+            this.tabPage32.Controls.Add(this.btnCalcularGaussSendel);
+            this.tabPage32.Controls.Add(this.tabGaussSendel);
+            this.tabPage32.Location = new System.Drawing.Point(4, 22);
+            this.tabPage32.Name = "tabPage32";
+            this.tabPage32.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage32.Size = new System.Drawing.Size(642, 500);
+            this.tabPage32.TabIndex = 1;
+            this.tabPage32.Text = "Gauss - Sendel";
+            this.tabPage32.UseVisualStyleBackColor = true;
+            // 
+            // tabGaussSendel
+            // 
+            this.tabGaussSendel.Controls.Add(this.tabPage33);
+            this.tabGaussSendel.Controls.Add(this.tabPage34);
+            this.tabGaussSendel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabGaussSendel.Location = new System.Drawing.Point(3, 277);
+            this.tabGaussSendel.Name = "tabGaussSendel";
+            this.tabGaussSendel.SelectedIndex = 0;
+            this.tabGaussSendel.Size = new System.Drawing.Size(636, 220);
+            this.tabGaussSendel.TabIndex = 9;
+            this.tabGaussSendel.Click += new System.EventHandler(this.tabGaussSendel_Click);
+            // 
+            // tabPage33
+            // 
+            this.tabPage33.Controls.Add(this.tablaGaussSendel);
+            this.tabPage33.Location = new System.Drawing.Point(4, 22);
+            this.tabPage33.Name = "tabPage33";
+            this.tabPage33.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage33.Size = new System.Drawing.Size(628, 194);
+            this.tabPage33.TabIndex = 0;
+            this.tabPage33.Text = "Resultado";
+            this.tabPage33.UseVisualStyleBackColor = true;
+            // 
+            // tablaGaussSendel
+            // 
+            this.tablaGaussSendel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaGaussSendel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tablaGaussSendel.Location = new System.Drawing.Point(3, 28);
+            this.tablaGaussSendel.Name = "tablaGaussSendel";
+            this.tablaGaussSendel.Size = new System.Drawing.Size(622, 163);
+            this.tablaGaussSendel.TabIndex = 22;
+            // 
+            // tabPage34
+            // 
+            this.tabPage34.Controls.Add(this.HistorialGaussSendel);
+            this.tabPage34.Location = new System.Drawing.Point(4, 22);
+            this.tabPage34.Name = "tabPage34";
+            this.tabPage34.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage34.Size = new System.Drawing.Size(628, 194);
+            this.tabPage34.TabIndex = 1;
+            this.tabPage34.Text = "Historial";
+            this.tabPage34.UseVisualStyleBackColor = true;
+            // 
+            // HistorialGaussSendel
+            // 
+            this.HistorialGaussSendel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HistorialGaussSendel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HistorialGaussSendel.Location = new System.Drawing.Point(3, 3);
+            this.HistorialGaussSendel.Name = "HistorialGaussSendel";
+            this.HistorialGaussSendel.Size = new System.Drawing.Size(622, 188);
+            this.HistorialGaussSendel.TabIndex = 0;
+            // 
+            // lblInstruccionesUnidad3
+            // 
+            this.lblInstruccionesUnidad3.AutoSize = true;
+            this.lblInstruccionesUnidad3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblInstruccionesUnidad3.Location = new System.Drawing.Point(0, 25);
+            this.lblInstruccionesUnidad3.Name = "lblInstruccionesUnidad3";
+            this.lblInstruccionesUnidad3.Size = new System.Drawing.Size(35, 13);
+            this.lblInstruccionesUnidad3.TabIndex = 9;
+            this.lblInstruccionesUnidad3.Text = "label4";
             // 
             // label2
             // 
@@ -1713,21 +2442,649 @@
             // 
             // grafica
             // 
-            chartArea1.Name = "ChartArea1";
-            this.grafica.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.grafica.ChartAreas.Add(chartArea2);
             this.grafica.Dock = System.Windows.Forms.DockStyle.Right;
-            legend1.Name = "Legend1";
-            this.grafica.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.grafica.Legends.Add(legend2);
             this.grafica.Location = new System.Drawing.Point(664, 0);
             this.grafica.Name = "grafica";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Funcion";
-            this.grafica.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Funcion";
+            this.grafica.Series.Add(series2);
             this.grafica.Size = new System.Drawing.Size(376, 590);
             this.grafica.TabIndex = 3;
             this.grafica.Text = "chart1";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(449, 51);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(102, 17);
+            this.label52.TabIndex = 163;
+            this.label52.Text = "Valor Inicial";
+            // 
+            // txtValorInicial5Jacobi
+            // 
+            this.txtValorInicial5Jacobi.Location = new System.Drawing.Point(350, 98);
+            this.txtValorInicial5Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorInicial5Jacobi.Name = "txtValorInicial5Jacobi";
+            this.txtValorInicial5Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtValorInicial5Jacobi.TabIndex = 162;
+            this.txtValorInicial5Jacobi.Text = "+0";
+            // 
+            // txtValorInicial4Jacobi
+            // 
+            this.txtValorInicial4Jacobi.Location = new System.Drawing.Point(292, 98);
+            this.txtValorInicial4Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorInicial4Jacobi.Name = "txtValorInicial4Jacobi";
+            this.txtValorInicial4Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtValorInicial4Jacobi.TabIndex = 161;
+            this.txtValorInicial4Jacobi.Text = "+0";
+            // 
+            // txtValorInicial1Jacobi
+            // 
+            this.txtValorInicial1Jacobi.Location = new System.Drawing.Point(234, 98);
+            this.txtValorInicial1Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorInicial1Jacobi.Name = "txtValorInicial1Jacobi";
+            this.txtValorInicial1Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtValorInicial1Jacobi.TabIndex = 158;
+            this.txtValorInicial1Jacobi.Text = "+0.25";
+            // 
+            // txtValorInicial2Jacobi
+            // 
+            this.txtValorInicial2Jacobi.Location = new System.Drawing.Point(176, 98);
+            this.txtValorInicial2Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorInicial2Jacobi.Name = "txtValorInicial2Jacobi";
+            this.txtValorInicial2Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtValorInicial2Jacobi.TabIndex = 159;
+            this.txtValorInicial2Jacobi.Text = "+0";
+            // 
+            // txtValorInicial3Jacobi
+            // 
+            this.txtValorInicial3Jacobi.Location = new System.Drawing.Point(118, 98);
+            this.txtValorInicial3Jacobi.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorInicial3Jacobi.Name = "txtValorInicial3Jacobi";
+            this.txtValorInicial3Jacobi.Size = new System.Drawing.Size(54, 20);
+            this.txtValorInicial3Jacobi.TabIndex = 160;
+            this.txtValorInicial3Jacobi.Text = "+0";
+            // 
+            // flowContenedorConstantes
+            // 
+            this.flowContenedorConstantes.Controls.Add(this.txtTI1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtZ3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtZ2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtZ1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtW3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtW2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtW1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtV3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtV2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtTI3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtTI2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtV1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtZ4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtW4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtV4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtTI4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtZ5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtW5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtV5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtTI5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtY3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtY2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtY1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtY4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtY5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtX3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtX2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtX1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtX4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtX5Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtValorInicial3Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtValorInicial2Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtValorInicial1Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtValorInicial4Jacobi);
+            this.flowContenedorConstantes.Controls.Add(this.txtValorInicial5Jacobi);
+            this.flowContenedorConstantes.Location = new System.Drawing.Point(103, 73);
+            this.flowContenedorConstantes.Name = "flowContenedorConstantes";
+            this.flowContenedorConstantes.Size = new System.Drawing.Size(406, 128);
+            this.flowContenedorConstantes.TabIndex = 164;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(96, 210);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(154, 17);
+            this.label53.TabIndex = 166;
+            this.label53.Text = "Cifras significativas:";
+            // 
+            // txtCifrasSignificativasJacobi
+            // 
+            this.txtCifrasSignificativasJacobi.Location = new System.Drawing.Point(256, 207);
+            this.txtCifrasSignificativasJacobi.Name = "txtCifrasSignificativasJacobi";
+            this.txtCifrasSignificativasJacobi.Size = new System.Drawing.Size(63, 20);
+            this.txtCifrasSignificativasJacobi.TabIndex = 165;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(80, 233);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(154, 17);
+            this.label38.TabIndex = 183;
+            this.label38.Text = "Cifras significativas:";
+            // 
+            // txtCifrasSignificativasGaussSendel
+            // 
+            this.txtCifrasSignificativasGaussSendel.Location = new System.Drawing.Point(240, 230);
+            this.txtCifrasSignificativasGaussSendel.Name = "txtCifrasSignificativasGaussSendel";
+            this.txtCifrasSignificativasGaussSendel.Size = new System.Drawing.Size(63, 20);
+            this.txtCifrasSignificativasGaussSendel.TabIndex = 182;
+            // 
+            // flowContenedorConstantesGauss
+            // 
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox2);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox3);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox4);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox5);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox6);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox7);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox8);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox9);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox10);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox11);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox12);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox13);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox14);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox15);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox16);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox17);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox18);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox19);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox20);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox21);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox22);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox23);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox24);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox25);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox26);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox27);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox28);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox29);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox30);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox31);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox32);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox33);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox34);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox35);
+            this.flowContenedorConstantesGauss.Controls.Add(this.textBox36);
+            this.flowContenedorConstantesGauss.Location = new System.Drawing.Point(87, 96);
+            this.flowContenedorConstantesGauss.Name = "flowContenedorConstantesGauss";
+            this.flowContenedorConstantesGauss.Size = new System.Drawing.Size(406, 128);
+            this.flowContenedorConstantesGauss.TabIndex = 181;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(54, 20);
+            this.textBox2.TabIndex = 116;
+            this.textBox2.Text = "+0";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(60, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(54, 20);
+            this.textBox3.TabIndex = 127;
+            this.textBox3.Text = "+0";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(118, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(54, 20);
+            this.textBox4.TabIndex = 126;
+            this.textBox4.Text = "+0";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(176, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(54, 20);
+            this.textBox5.TabIndex = 125;
+            this.textBox5.Text = "+0";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(234, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(54, 20);
+            this.textBox6.TabIndex = 124;
+            this.textBox6.Text = "+0";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(292, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(54, 20);
+            this.textBox7.TabIndex = 123;
+            this.textBox7.Text = "+0";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(350, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(54, 20);
+            this.textBox8.TabIndex = 122;
+            this.textBox8.Text = "+0";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(2, 26);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(54, 20);
+            this.textBox9.TabIndex = 121;
+            this.textBox9.Text = "+0";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(60, 26);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(54, 20);
+            this.textBox10.TabIndex = 120;
+            this.textBox10.Text = "+0";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(118, 26);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(54, 20);
+            this.textBox11.TabIndex = 118;
+            this.textBox11.Text = "+0";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(176, 26);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(54, 20);
+            this.textBox12.TabIndex = 117;
+            this.textBox12.Text = "+0";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(234, 26);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(54, 20);
+            this.textBox13.TabIndex = 119;
+            this.textBox13.Text = "+0";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(292, 26);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(54, 20);
+            this.textBox14.TabIndex = 131;
+            this.textBox14.Text = "+0";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(350, 26);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(54, 20);
+            this.textBox15.TabIndex = 130;
+            this.textBox15.Text = "+0";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(2, 50);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(54, 20);
+            this.textBox16.TabIndex = 129;
+            this.textBox16.Text = "+0.5";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(60, 50);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(54, 20);
+            this.textBox17.TabIndex = 128;
+            this.textBox17.Text = "+0";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(118, 50);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(54, 20);
+            this.textBox18.TabIndex = 135;
+            this.textBox18.Text = "+0";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(176, 50);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(54, 20);
+            this.textBox19.TabIndex = 134;
+            this.textBox19.Text = "+0";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(234, 50);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(54, 20);
+            this.textBox20.TabIndex = 133;
+            this.textBox20.Text = "+0.25";
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(292, 50);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(54, 20);
+            this.textBox21.TabIndex = 132;
+            this.textBox21.Text = "+0";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(350, 50);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(54, 20);
+            this.textBox22.TabIndex = 138;
+            this.textBox22.Text = "+0";
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(2, 74);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(54, 20);
+            this.textBox23.TabIndex = 137;
+            this.textBox23.Text = "+1.5";
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(60, 74);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(54, 20);
+            this.textBox24.TabIndex = 136;
+            this.textBox24.Text = "+0";
+            // 
+            // textBox25
+            // 
+            this.textBox25.Location = new System.Drawing.Point(118, 74);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(54, 20);
+            this.textBox25.TabIndex = 139;
+            this.textBox25.Text = "+0";
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(176, 74);
+            this.textBox26.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(54, 20);
+            this.textBox26.TabIndex = 140;
+            this.textBox26.Text = "+0.25";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(234, 74);
+            this.textBox27.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(54, 20);
+            this.textBox27.TabIndex = 143;
+            this.textBox27.Text = "+0";
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(292, 74);
+            this.textBox28.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(54, 20);
+            this.textBox28.TabIndex = 142;
+            this.textBox28.Text = "+0.25";
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(350, 74);
+            this.textBox29.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(54, 20);
+            this.textBox29.TabIndex = 141;
+            this.textBox29.Text = "+0";
+            // 
+            // textBox30
+            // 
+            this.textBox30.Location = new System.Drawing.Point(2, 98);
+            this.textBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox30.Name = "textBox30";
+            this.textBox30.Size = new System.Drawing.Size(54, 20);
+            this.textBox30.TabIndex = 144;
+            this.textBox30.Text = "+0.5";
+            // 
+            // textBox31
+            // 
+            this.textBox31.Location = new System.Drawing.Point(60, 98);
+            this.textBox31.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox31.Name = "textBox31";
+            this.textBox31.Size = new System.Drawing.Size(54, 20);
+            this.textBox31.TabIndex = 145;
+            this.textBox31.Text = "+0";
+            // 
+            // textBox32
+            // 
+            this.textBox32.Location = new System.Drawing.Point(118, 98);
+            this.textBox32.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox32.Name = "textBox32";
+            this.textBox32.Size = new System.Drawing.Size(54, 20);
+            this.textBox32.TabIndex = 160;
+            this.textBox32.Text = "+0";
+            // 
+            // textBox33
+            // 
+            this.textBox33.Location = new System.Drawing.Point(176, 98);
+            this.textBox33.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox33.Name = "textBox33";
+            this.textBox33.Size = new System.Drawing.Size(54, 20);
+            this.textBox33.TabIndex = 159;
+            this.textBox33.Text = "+0";
+            // 
+            // textBox34
+            // 
+            this.textBox34.Location = new System.Drawing.Point(234, 98);
+            this.textBox34.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox34.Name = "textBox34";
+            this.textBox34.Size = new System.Drawing.Size(54, 20);
+            this.textBox34.TabIndex = 158;
+            this.textBox34.Text = "+0.25";
+            // 
+            // textBox35
+            // 
+            this.textBox35.Location = new System.Drawing.Point(292, 98);
+            this.textBox35.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox35.Name = "textBox35";
+            this.textBox35.Size = new System.Drawing.Size(54, 20);
+            this.textBox35.TabIndex = 161;
+            this.textBox35.Text = "+0";
+            // 
+            // textBox36
+            // 
+            this.textBox36.Location = new System.Drawing.Point(350, 98);
+            this.textBox36.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox36.Name = "textBox36";
+            this.textBox36.Size = new System.Drawing.Size(54, 20);
+            this.textBox36.TabIndex = 162;
+            this.textBox36.Text = "+0";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(433, 74);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(102, 17);
+            this.label40.TabIndex = 180;
+            this.label40.Text = "Valor Inicial";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label41.Location = new System.Drawing.Point(3, 3);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(506, 39);
+            this.label41.TabIndex = 179;
+            this.label41.Text = resources.GetString("label41.Text");
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(397, 74);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(17, 17);
+            this.label42.TabIndex = 178;
+            this.label42.Text = "Z";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(339, 76);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(20, 17);
+            this.label43.TabIndex = 177;
+            this.label43.Text = "Y";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(283, 76);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(20, 17);
+            this.label44.TabIndex = 176;
+            this.label44.Text = "X";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(225, 78);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(24, 17);
+            this.label45.TabIndex = 175;
+            this.label45.Text = "W";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(165, 78);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(19, 17);
+            this.label46.TabIndex = 174;
+            this.label46.Text = "V";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(103, 78);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(29, 17);
+            this.label47.TabIndex = 173;
+            this.label47.Text = "T.I";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(40, 191);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(30, 17);
+            this.label54.TabIndex = 172;
+            this.label54.Text = "Z =";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(40, 169);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(33, 17);
+            this.label55.TabIndex = 171;
+            this.label55.Text = "Y =";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(40, 145);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(33, 17);
+            this.label56.TabIndex = 170;
+            this.label56.Text = "X =";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(40, 122);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 17);
+            this.label57.TabIndex = 169;
+            this.label57.Text = "W=";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(40, 98);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(37, 17);
+            this.label58.TabIndex = 168;
+            this.label58.Text = "V = ";
+            // 
+            // btnCalcularGaussSendel
+            // 
+            this.btnCalcularGaussSendel.Location = new System.Drawing.Point(533, 194);
+            this.btnCalcularGaussSendel.Name = "btnCalcularGaussSendel";
+            this.btnCalcularGaussSendel.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcularGaussSendel.TabIndex = 167;
+            this.btnCalcularGaussSendel.Text = "Calcular";
+            this.btnCalcularGaussSendel.UseVisualStyleBackColor = true;
+            this.btnCalcularGaussSendel.Click += new System.EventHandler(this.btnCalcularGaussSendel_Click);
             // 
             // numeroDataGridViewTextBoxColumn
             // 
@@ -1893,6 +3250,40 @@
             // 
             this.resultadoNewtonRapshonBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoNewtonRapshon);
             // 
+            // funcionDataGridViewTextBoxColumn2
+            // 
+            this.funcionDataGridViewTextBoxColumn2.DataPropertyName = "Funcion";
+            this.funcionDataGridViewTextBoxColumn2.HeaderText = "Funcion";
+            this.funcionDataGridViewTextBoxColumn2.Name = "funcionDataGridViewTextBoxColumn2";
+            // 
+            // derivadaDataGridViewTextBoxColumn
+            // 
+            this.derivadaDataGridViewTextBoxColumn.DataPropertyName = "derivada";
+            this.derivadaDataGridViewTextBoxColumn.HeaderText = "Derivada";
+            this.derivadaDataGridViewTextBoxColumn.Name = "derivadaDataGridViewTextBoxColumn";
+            // 
+            // valorXDataGridViewTextBoxColumn1
+            // 
+            this.valorXDataGridViewTextBoxColumn1.DataPropertyName = "valorX";
+            this.valorXDataGridViewTextBoxColumn1.HeaderText = "valor X";
+            this.valorXDataGridViewTextBoxColumn1.Name = "valorXDataGridViewTextBoxColumn1";
+            // 
+            // errorRelativoPorcentualDataGridViewTextBoxColumn4
+            // 
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.DataPropertyName = "ErrorRelativoPorcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.HeaderText = "Error Relativo Porcentual";
+            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn4";
+            // 
+            // toleranciaPorcentualDataGridViewTextBoxColumn1
+            // 
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.DataPropertyName = "ToleranciaPorcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.HeaderText = "Tolerancia Porcentual";
+            this.toleranciaPorcentualDataGridViewTextBoxColumn1.Name = "toleranciaPorcentualDataGridViewTextBoxColumn1";
+            // 
+            // resultadoNewtonRapshonBindingSource1
+            // 
+            this.resultadoNewtonRapshonBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoNewtonRapshon);
+            // 
             // funcionDataGridViewTextBoxColumn
             // 
             this.funcionDataGridViewTextBoxColumn.DataPropertyName = "Funcion";
@@ -1961,40 +3352,6 @@
             // 
             this.resultadosTrapecioBindingSource.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_4.ResultadosTrapecio);
             // 
-            // resultadoNewtonRapshonBindingSource1
-            // 
-            this.resultadoNewtonRapshonBindingSource1.DataSource = typeof(MetodosNumericos.src.herramientas.objetos.Unidad_2.ResultadoNewtonRapshon);
-            // 
-            // funcionDataGridViewTextBoxColumn2
-            // 
-            this.funcionDataGridViewTextBoxColumn2.DataPropertyName = "Funcion";
-            this.funcionDataGridViewTextBoxColumn2.HeaderText = "Funcion";
-            this.funcionDataGridViewTextBoxColumn2.Name = "funcionDataGridViewTextBoxColumn2";
-            // 
-            // derivadaDataGridViewTextBoxColumn
-            // 
-            this.derivadaDataGridViewTextBoxColumn.DataPropertyName = "derivada";
-            this.derivadaDataGridViewTextBoxColumn.HeaderText = "Derivada";
-            this.derivadaDataGridViewTextBoxColumn.Name = "derivadaDataGridViewTextBoxColumn";
-            // 
-            // valorXDataGridViewTextBoxColumn1
-            // 
-            this.valorXDataGridViewTextBoxColumn1.DataPropertyName = "valorX";
-            this.valorXDataGridViewTextBoxColumn1.HeaderText = "valor X";
-            this.valorXDataGridViewTextBoxColumn1.Name = "valorXDataGridViewTextBoxColumn1";
-            // 
-            // errorRelativoPorcentualDataGridViewTextBoxColumn4
-            // 
-            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.DataPropertyName = "ErrorRelativoPorcentual";
-            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.HeaderText = "Error Relativo Porcentual";
-            this.errorRelativoPorcentualDataGridViewTextBoxColumn4.Name = "errorRelativoPorcentualDataGridViewTextBoxColumn4";
-            // 
-            // toleranciaPorcentualDataGridViewTextBoxColumn1
-            // 
-            this.toleranciaPorcentualDataGridViewTextBoxColumn1.DataPropertyName = "ToleranciaPorcentual";
-            this.toleranciaPorcentualDataGridViewTextBoxColumn1.HeaderText = "Tolerancia Porcentual";
-            this.toleranciaPorcentualDataGridViewTextBoxColumn1.Name = "toleranciaPorcentualDataGridViewTextBoxColumn1";
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2053,6 +3410,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.historialNewtonRapshon)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage29.ResumeLayout(false);
+            this.tabPage29.PerformLayout();
+            this.tabJacobi.ResumeLayout(false);
+            this.tabPage30.ResumeLayout(false);
+            this.tabPage30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaJacobi)).EndInit();
+            this.tabPage31.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.historialJacobi)).EndInit();
+            this.tabPage32.ResumeLayout(false);
+            this.tabPage32.PerformLayout();
+            this.tabGaussSendel.ResumeLayout(false);
+            this.tabPage33.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tablaGaussSendel)).EndInit();
+            this.tabPage34.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HistorialGaussSendel)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabControl2.ResumeLayout(false);
@@ -2079,14 +3452,18 @@
             this.tabPage13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.historialUnidad5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grafica)).EndInit();
+            this.flowContenedorConstantes.ResumeLayout(false);
+            this.flowContenedorConstantes.PerformLayout();
+            this.flowContenedorConstantesGauss.ResumeLayout(false);
+            this.flowContenedorConstantesGauss.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoExactitudPrecisionBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoSerieMaclaurinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoModeloBireccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultadosTrapecioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resultadoNewtonRapshonBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2273,5 +3650,124 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn errorRelativoPorcentualDataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn toleranciaPorcentualDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource resultadoNewtonRapshonBindingSource1;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage29;
+        private System.Windows.Forms.TabControl tabJacobi;
+        private System.Windows.Forms.TabPage tabPage30;
+        private System.Windows.Forms.DataGridView tablaJacobi;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TabPage tabPage31;
+        private System.Windows.Forms.DataGridView historialJacobi;
+        private System.Windows.Forms.Button btnCalcularJacobi;
+        private System.Windows.Forms.TabPage tabPage32;
+        private System.Windows.Forms.TabControl tabGaussSendel;
+        private System.Windows.Forms.TabPage tabPage33;
+        private System.Windows.Forms.DataGridView tablaGaussSendel;
+        private System.Windows.Forms.TabPage tabPage34;
+        private System.Windows.Forms.DataGridView HistorialGaussSendel;
+        private System.Windows.Forms.Label lblInstruccionesUnidad3;
+        public System.Windows.Forms.TextBox txtX5Jacobi;
+        public System.Windows.Forms.TextBox txtX4Jacobi;
+        public System.Windows.Forms.TextBox txtX1Jacobi;
+        public System.Windows.Forms.TextBox txtX2Jacobi;
+        public System.Windows.Forms.TextBox txtX3Jacobi;
+        public System.Windows.Forms.TextBox txtY5Jacobi;
+        public System.Windows.Forms.TextBox txtY4Jacobi;
+        public System.Windows.Forms.TextBox txtY1Jacobi;
+        public System.Windows.Forms.TextBox txtY2Jacobi;
+        public System.Windows.Forms.TextBox txtY3Jacobi;
+        public System.Windows.Forms.TextBox txtTI5Jacobi;
+        public System.Windows.Forms.TextBox txtV5Jacobi;
+        public System.Windows.Forms.TextBox txtW5Jacobi;
+        public System.Windows.Forms.TextBox txtZ5Jacobi;
+        public System.Windows.Forms.TextBox txtTI4Jacobi;
+        public System.Windows.Forms.TextBox txtV4Jacobi;
+        public System.Windows.Forms.TextBox txtW4Jacobi;
+        public System.Windows.Forms.TextBox txtZ4Jacobi;
+        public System.Windows.Forms.TextBox txtV1Jacobi;
+        public System.Windows.Forms.TextBox txtTI1Jacobi;
+        public System.Windows.Forms.TextBox txtTI2Jacobi;
+        public System.Windows.Forms.TextBox txtTI3Jacobi;
+        public System.Windows.Forms.TextBox txtV2Jacobi;
+        public System.Windows.Forms.TextBox txtV3Jacobi;
+        public System.Windows.Forms.TextBox txtW1Jacobi;
+        public System.Windows.Forms.TextBox txtW2Jacobi;
+        public System.Windows.Forms.TextBox txtW3Jacobi;
+        public System.Windows.Forms.TextBox txtZ1Jacobi;
+        public System.Windows.Forms.TextBox txtZ2Jacobi;
+        public System.Windows.Forms.TextBox txtZ3Jacobi;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label52;
+        public System.Windows.Forms.TextBox txtValorInicial5Jacobi;
+        public System.Windows.Forms.TextBox txtValorInicial4Jacobi;
+        public System.Windows.Forms.TextBox txtValorInicial1Jacobi;
+        public System.Windows.Forms.TextBox txtValorInicial2Jacobi;
+        public System.Windows.Forms.TextBox txtValorInicial3Jacobi;
+        private System.Windows.Forms.FlowLayoutPanel flowContenedorConstantes;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox txtCifrasSignificativasJacobi;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox txtCifrasSignificativasGaussSendel;
+        private System.Windows.Forms.FlowLayoutPanel flowContenedorConstantesGauss;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox textBox15;
+        public System.Windows.Forms.TextBox textBox16;
+        public System.Windows.Forms.TextBox textBox17;
+        public System.Windows.Forms.TextBox textBox18;
+        public System.Windows.Forms.TextBox textBox19;
+        public System.Windows.Forms.TextBox textBox20;
+        public System.Windows.Forms.TextBox textBox21;
+        public System.Windows.Forms.TextBox textBox22;
+        public System.Windows.Forms.TextBox textBox23;
+        public System.Windows.Forms.TextBox textBox24;
+        public System.Windows.Forms.TextBox textBox25;
+        public System.Windows.Forms.TextBox textBox26;
+        public System.Windows.Forms.TextBox textBox27;
+        public System.Windows.Forms.TextBox textBox28;
+        public System.Windows.Forms.TextBox textBox29;
+        public System.Windows.Forms.TextBox textBox30;
+        public System.Windows.Forms.TextBox textBox31;
+        public System.Windows.Forms.TextBox textBox32;
+        public System.Windows.Forms.TextBox textBox33;
+        public System.Windows.Forms.TextBox textBox34;
+        public System.Windows.Forms.TextBox textBox35;
+        public System.Windows.Forms.TextBox textBox36;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Button btnCalcularGaussSendel;
     }
 }
