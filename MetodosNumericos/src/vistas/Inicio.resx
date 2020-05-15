@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label41.Text" xml:space="preserve">
-    <value>Escribe la cantidad de ecuaciones que tengas, siempre respendando el formado +T.I + V + W + X + Y + Z
-Solo tienes que escribir las constantes que multiplica a cada variable.
-Recuerda que la primera casilla corresponde al termino independiente
-</value>
-  </data>
   <metadata name="resultadoExactitudPrecisionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>437, 19</value>
   </metadata>
@@ -131,9 +125,6 @@ Recuerda que la primera casilla corresponde al termino independiente
   </metadata>
   <metadata name="resultadoSerieMaclaurinBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>303, 58</value>
-  </metadata>
-  <metadata name="exponente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
   </metadata>
   <metadata name="exponente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -153,30 +144,21 @@ Solo tienes que escribir las constantes que multiplica a cada variable.
 Recuerda que la primera casilla corresponde al termino independiente
 </value>
   </data>
-  <metadata name="resultadosBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>11, 19</value>
+  <metadata name="resultadoJacobiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>568, 97</value>
   </metadata>
-  <metadata name="resultadosTrapecioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>204, 19</value>
-  </metadata>
-  <metadata name="resultadoExactitudPrecisionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>437, 19</value>
-  </metadata>
-  <metadata name="resultadoExactitudPrecisionBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 58</value>
-  </metadata>
-  <metadata name="resultadoSerieMaclaurinBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 58</value>
-  </metadata>
-  <metadata name="resultadoModeloBireccionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>565, 58</value>
-  </metadata>
-  <metadata name="resultadoNewtonRapshonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 97</value>
-  </metadata>
-  <metadata name="resultadoNewtonRapshonBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>289, 97</value>
-  </metadata>
+  <data name="label41.Text" xml:space="preserve">
+    <value>Escribe la cantidad de ecuaciones que tengas, siempre respendando el formado +T.I + V + W + X + Y + Z
+Solo tienes que escribir las constantes que multiplica a cada variable.
+Recuerda que la primera casilla corresponde al termino independiente
+</value>
+  </data>
+  <data name="lblInstruccionesUnidad3.Text" xml:space="preserve">
+    <value>Existen multipies metódos para resolver un sistema de ecuacuaciones, como lo puede ser igualación, sustitución, o tambien usando matrices-
+En esta ocación mostraremos dos metodos para darle solución.
+El método de jacobi es menos preciso que Gauss-Sendel, pero ambos llegamos a una muy buena aproximación
+</value>
+  </data>
   <metadata name="resultadosBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>11, 19</value>
   </metadata>

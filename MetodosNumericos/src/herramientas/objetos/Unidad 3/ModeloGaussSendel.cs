@@ -57,7 +57,7 @@ namespace MetodosNumericos.src.herramientas.objetos.Unidad_3
         private void iteraciones()
         {
             int i = 1;
-            while (/*_Resultado.ErrorRelativoPorcentual1 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual2 > _Resultado.ToleranciaPorcentual && */_Resultado.ErrorRelativoPorcentual3 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual4 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual5 > _Resultado.ToleranciaPorcentual)
+            while (_Resultado.ErrorRelativoPorcentual1 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual2 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual3 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual4 > _Resultado.ToleranciaPorcentual && _Resultado.ErrorRelativoPorcentual5 > _Resultado.ToleranciaPorcentual)
             {
                 _Resultado.ValorInicial1 =
                     _terminosIndependientes[0]
